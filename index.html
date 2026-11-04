@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jaysone Dela Cruz Portfolio</title>
-<meta name="description" content="Jaysone (Jei) Dela Cruz, Amazon & e-commerce operations specialist with 10+ years of remote experience.">
+<meta name="description" content="Jaysone Dela Cruz, Amazon & e-commerce operations specialist with 10+ years of remote experience.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
@@ -40,13 +40,36 @@ h1,h2,h3{font-family:var(--display);font-weight:400;color:var(--heading);text-wr
 @media (max-width:420px){.wrap{padding:0 16px}}
 
 /* top bar */
-.nav{position:sticky;top:0;z-index:5;background:var(--heading);border-bottom:1px solid #3a2a22}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:56px}
-.brand{font-family:var(--display);font-size:20px;color:#F7F3EC;text-decoration:none}
-.nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;font-size:14px}
-.nav ul a{color:#E8DCCB;text-decoration:none}
-.nav ul a:hover{color:#fff}
-@media (max-width:640px){.nav ul{display:none}}
+/* side navigation */
+.nav{position:fixed;top:0;left:0;bottom:0;width:240px;z-index:5;background:var(--heading);display:flex;flex-direction:column;padding:36px 28px;overflow-y:auto}
+.nav-inner{display:flex;flex-direction:column;gap:28px;height:100%}
+.brand{font-family:var(--display);font-size:26px;line-height:1.1;color:#F7F3EC;text-decoration:none}
+.brand small{display:block;margin-top:8px;font:500 12px/1.4 var(--body);letter-spacing:.06em;text-transform:uppercase;color:#C9B79F}
+.nav ul{display:flex;flex-direction:column;gap:2px;list-style:none;margin:0;padding:0;font-size:15px}
+.nav ul a{display:block;padding:9px 14px;border-radius:8px;color:#E8DCCB;text-decoration:none;border-left:2px solid transparent}
+.nav ul a:hover{color:#fff;background:rgba(247,243,236,.06)}
+.nav ul a.active{color:#fff;background:rgba(247,243,236,.1);border-left-color:var(--cta)}
+.nav-cta{margin-top:auto;display:grid;gap:10px}
+.nav-cta a{display:block;text-align:center;padding:11px 14px;border-radius:999px;font:600 14px/1 var(--body);text-decoration:none}
+.nav-cta .p{background:var(--cta);color:#fff}
+.nav-cta .p:hover{background:#c97c5c}
+.nav-cta .s{border:1px solid rgba(247,243,236,.4);color:#F7F3EC}
+.nav-cta .s:hover{border-color:#fff}
+body{padding-left:240px}
+main.wrap,footer.wrap{max-width:1080px}
+[id]{scroll-margin-top:24px}
+@media (max-width:980px){
+  body{padding-left:0}
+  .nav{position:sticky;bottom:auto;width:auto;height:auto;padding:0;overflow:visible}
+  .nav-inner{flex-direction:row;align-items:center;gap:16px;height:56px;padding:0 16px}
+  .brand{font-size:20px;white-space:nowrap}
+  .brand small,.nav-cta{display:none}
+  .nav ul{flex-direction:row;overflow-x:auto;gap:4px;font-size:14px;scrollbar-width:none}
+  .nav ul::-webkit-scrollbar{display:none}
+  .nav ul a{white-space:nowrap;padding:7px 10px;border-left:0}
+  .nav ul a.active{box-shadow:inset 0 -2px 0 var(--cta);border-radius:6px 6px 0 0}
+  [id]{scroll-margin-top:72px}
+}
 
 /* hero */
 .hero{padding:56px 0 44px;display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:48px;align-items:center}
@@ -75,7 +98,7 @@ h1,h2,h3{font-family:var(--display);font-weight:400;color:var(--heading);text-wr
 .metric .v{font:700 32px/1.05 var(--body);color:var(--heading);font-variant-numeric:tabular-nums}
 .metric.feature{background:var(--heading)}
 .metric.feature .k,.metric.feature .n{color:#E8DCCB}
-.metric.feature .v{color:#F7F3EC}
+.metric.feature .v{color:#F7F3EC;white-space:nowrap;font-size:clamp(24px,2.3vw,32px)}
 .metric .n{font-size:14px;color:var(--muted)}
 .bar{height:6px;border-radius:3px;background:var(--surface);position:relative;margin-top:6px}
 .bar i{position:absolute;inset:0 auto 0 0;border-radius:3px;background:var(--sage)}
@@ -121,8 +144,16 @@ section{padding:8px 0 72px}
 .earlier p{margin:4px 0 0;color:var(--muted);font-size:14.5px}
 .earlier .when{display:block;margin-top:2px}
 
-.tools{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
-.tools li{font:500 14px/1 var(--body);padding:10px 14px;border-radius:999px;background:var(--card-soft);border:1px solid var(--line);color:var(--heading)}
+.toolgroups{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;display:grid;gap:14px;align-content:start}
+.tg-head{display:flex;align-items:center;gap:12px}
+.tg-ic{width:42px;height:42px;flex:none;border-radius:10px;background:var(--heading);color:#E8DCCB;display:grid;place-items:center}
+.tg-ic svg{width:22px;height:22px}
+.tg h3{font:600 16px/1.2 var(--body);color:var(--heading)}
+.tg ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.tg li{font:500 14px/1 var(--body);padding:9px 13px;border-radius:999px;background:var(--card-soft);border:1px solid var(--line);color:var(--heading)}
+@media (max-width:1100px){.toolgroups{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.toolgroups{grid-template-columns:1fr}}
 
 .edu{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .edu h3{font:600 18px/1.3 var(--body);color:var(--heading)}
@@ -137,7 +168,13 @@ section{padding:8px 0 72px}
 .contact .btn:hover{color:#fff;border-color:#fff}
 .contact .btn.primary{background:var(--cta);border-color:var(--cta);color:#fff}
 .contact code{font:500 15px var(--body);color:#E8DCCB}
-.copied{font:500 13px var(--body);color:#E8DCCB;min-height:1em}
+.contact-list{list-style:none;margin:6px 0 0;padding:18px 0 0;border-top:1px solid rgba(247,243,236,.18);display:grid;gap:12px}
+.contact-list li{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px}
+.contact-list .ck{width:90px;font:600 12px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;color:#C9B79F}
+.contact-list a{color:#F7F3EC;font:500 17px/1.3 var(--body);text-decoration:none;border-bottom:1px solid rgba(247,243,236,.3)}
+.contact-list a:hover{border-bottom-color:#F7F3EC}
+.contact-list .copy{font:600 12px/1 var(--body);padding:6px 11px;border-radius:999px;border:1px solid rgba(247,243,236,.35);background:transparent;color:#E8DCCB;cursor:pointer}
+.contact-list .copy:hover{color:#fff;border-color:#fff}
 /* work samples */
 .lead{color:var(--muted);max-width:66ch;margin:-12px 0 24px}
 .samples{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
@@ -194,8 +231,8 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:13.5px}
 </head>
 <body>
 <nav class="nav" aria-label="Main">
-  <div class="wrap">
-    <a class="brand" href="#top">Jeice Cruz</a>
+  <div class="nav-inner">
+    <a class="brand" href="#top">Jeice Cruz<small>Amazon &amp; E-commerce Ops</small></a>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -206,6 +243,10 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:13.5px}
       <li><a href="#tools">Tools</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <div class="nav-cta">
+      <a class="p" href="#contact">Work with me</a>
+      <a class="s" href="https://www.linkedin.com/in/jeicecruz/">LinkedIn</a>
+    </div>
   </div>
 </nav>
 
@@ -213,21 +254,21 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:13.5px}
   <header class="hero">
     <div class="hero-text">
     <div class="tag">Amazon &amp; E-commerce Operations Specialist · Philippines · Remote</div>
-    <h1>Jaysone F. Dela Cruz <span>(Jei)</span></h1>
-    <p class="lede">I manage and optimize the day-to-day operations of Amazon and Shopify accounts for U.S. and European brands, overseeing large-scale catalogs of <strong>3,000–5,000 ASINs</strong>, daily PPC budgets of <strong>$4,000–$8,000</strong>, and accounts generating <strong>$300K–$1M in monthly revenue</strong>.</p>
+    <h1>Jaysone Dela Cruz</h1>
+    <p class="lede">I manage and optimize the day-to-day operations of Amazon and Shopify accounts for U.S. and European brands, overseeing large-scale catalogs of <strong>7,000–10,000 ASINs</strong>, daily PPC budgets of <strong>$4,000–$8,000</strong>, and accounts generating <strong>$500K–$1.5M in monthly revenue</strong>.</p>
     <p class="lede">With 10+ years of remote experience, I bring hands-on expertise in marketplace operations, catalog management, listing optimization, product variations, A+ Content, advertising coordination, and account health management—ensuring accuracy, operational efficiency, and sustainable business growth.</p>
     <div class="actions">
       <a class="btn primary" href="#contact">Work with me</a>
       <a class="btn" href="https://www.linkedin.com/in/jeicecruz/">LinkedIn profile</a>
     </div>
     </div>
-    <figure class="portrait"><img src="img/portrait.jpg" alt="Portrait of Jaysone (Jei) Dela Cruz in a camel blazer" width="640" height="800"></figure>
+    <figure class="portrait"><img src="img/portrait.jpg" alt="Portrait of Jaysone Dela Cruz in a camel blazer" width="640" height="800"></figure>
   </header>
 
   <div class="metrics" role="list" aria-label="Key numbers">
     <div class="metric feature" role="listitem">
       <div class="k">Monthly sales per PPC account</div>
-      <div class="v">$300K–$1M</div>
+      <div class="v">$500K–$1.5M</div>
       <div class="n">Average total monthly sales of the accounts I ran ads for</div>
     </div>
     <div class="metric" role="listitem">
@@ -248,7 +289,7 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:13.5px}
     </div>
     <div class="metric" role="listitem">
       <div class="k">Catalog per account</div>
-      <div class="v">3–5K ASINs</div>
+      <div class="v">7–10K ASINs</div>
       <div class="n">Across multiple brands per client</div>
     </div>
     <div class="metric" role="listitem">
@@ -309,7 +350,7 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:13.5px}
     </ul>
     <div class="cat-work">
       <div><span class="kind">Product listings</span><p>Titles, bullets, attributes, variations, A+ Content and Brand Stores built to each category's style guide and required attributes.</p></div>
-      <div><span class="kind">PPC</span><p>Sponsored Products and Sponsored Brands campaigns on accounts doing $300K–$1M in total monthly sales, managed to ACoS and TACoS targets.</p></div>
+      <div><span class="kind">PPC</span><p>Sponsored Products and Sponsored Brands campaigns on accounts doing $500K–$1.5M in total monthly sales, managed to ACoS and TACoS targets.</p></div>
       <div><span class="kind">Account health</span><p>Suppressions, compliance and restricted-category cases, including the extra documentation that supplements, food and beauty products often need.</p></div>
     </div>
   </section>
@@ -467,7 +508,7 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:13.5px}
           <div class="org">Merkato LLC</div>
           <p class="ctx">U.S. Amazon and e-commerce agency · Remote</p>
           <ul>
-            <li>Co-led a 10-person team running Amazon and Shopify operations for 2–3 U.S. clients across multiple brands, with 3,000–5,000 ASINs per account.</li>
+            <li>Co-led a 10-person team running Amazon and Shopify operations for 2–3 U.S. clients across multiple brands, with 7,000–10,000 ASINs per account.</li>
             <li>Managed Amazon PPC at $4–5K/day on an account with an estimated $11–13M in annual revenue, holding ACoS at 19–20% against a 21% target at roughly 5× ROAS; managed $5–8K/day budgets on another account.</li>
             <li>Handled inventory forecasting in Seller Central and Vendor Central, and fixed listing attributes and variations.</li>
             <li>Investigated and resolved ASIN suppressions, listing issues and account-compliance cases across large catalogs.</li>
@@ -508,9 +549,14 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:13.5px}
 
   <section id="tools" aria-labelledby="tools-h">
     <div class="sec-head"><h2 id="tools-h">Platforms &amp; tools</h2></div>
-    <ul class="tools">
-      <li>Amazon Seller Central</li><li>Amazon Vendor Central</li><li>Shopify</li><li>Helium 10</li><li>Jungle Scout</li><li>Cobalt</li><li>Merchant Spring</li><li>Keepa</li><li>Asana</li><li>Monday.com</li><li>Wrike</li><li>Trello</li><li>Google Sheets</li><li>Google Analytics</li><li>Excel</li><li>Figma</li><li>ChatGPT</li><li>Claude</li><li>Loom</li><li>Zoom</li>
-    </ul>
+    <div class="toolgroups">
+      <div class="tg"><div class="tg-head"><span class="tg-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1.5-5h15L21 9"/><path d="M3 9h18v2a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0z"/><path d="M5 13v7h14v-7"/><path d="M10 20v-4h4v4"/></svg></span><h3>Marketplaces</h3></div><ul><li>Amazon Seller Central</li><li>Amazon Vendor Central</li><li>Shopify</li></ul></div>
+      <div class="tg"><div class="tg-head"><span class="tg-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/><path d="M8 12l2-2 1.5 1.5L13.5 9"/></svg></span><h3>Product research</h3></div><ul><li>Helium 10</li><li>Jungle Scout</li><li>Keepa</li></ul></div>
+      <div class="tg"><div class="tg-head"><span class="tg-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V4"/><path d="M4 20h16"/><rect x="7" y="12" width="3" height="5"/><rect x="12" y="8" width="3" height="9"/><rect x="17" y="5" width="3" height="12"/></svg></span><h3>Ads &amp; analytics</h3></div><ul><li>Cobalt</li><li>Merchant Spring</li><li>Google Analytics</li></ul></div>
+      <div class="tg"><div class="tg-head"><span class="tg-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16M15 4v16"/><path d="M5 8h2M11 8h2M11 11h2M17 8h2"/></svg></span><h3>Project management</h3></div><ul><li>Asana</li><li>Monday.com</li><li>Wrike</li><li>Trello</li></ul></div>
+      <div class="tg"><div class="tg-head"><span class="tg-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M3 14h18M9 4v16"/></svg></span><h3>Data &amp; design</h3></div><ul><li>Google Sheets</li><li>Excel</li><li>Figma</li></ul></div>
+      <div class="tg"><div class="tg-head"><span class="tg-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.6L18.5 9l-4.7 1.4L12 15l-1.8-4.6L5.5 9l4.7-1.4z"/><path d="M18 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/><path d="M5 16v4M3 18h4"/></svg></span><h3>AI &amp; communication</h3></div><ul><li>ChatGPT</li><li>Claude</li><li>Loom</li><li>Zoom</li></ul></div>
+    </div>
   </section>
 
   <section aria-labelledby="edu-h">
@@ -526,23 +572,40 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:13.5px}
       <h2 id="contact-h">Need someone to run your Amazon catalog, ads or account health?</h2>
       <p>I'm available for full-time or contract work with brands and agencies in the U.S. and Europe.</p>
       <div class="row">
-        <a class="btn primary" href="mailto:iamjeiceee@gmail.com">Email me</a>
-        <button class="btn" type="button" id="copy">Copy email</button>
+        <a class="btn primary" href="https://wa.me/639172449213">Message on WhatsApp</a>
+        <a class="btn" href="mailto:jeice.dcruz@gmail.com">Email me</a>
         <a class="btn" href="https://www.linkedin.com/in/jeicecruz/">LinkedIn</a>
       </div>
-      <div class="row"><code>iamjeiceee@gmail.com</code><span class="copied" id="copied" aria-live="polite"></span></div>
+      <ul class="contact-list">
+        <li><span class="ck">WhatsApp</span><a href="https://wa.me/639172449213">+63 917 244 9213</a><button class="copy" type="button" data-copy="+639172449213">Copy</button></li>
+        <li><span class="ck">Email</span><a href="mailto:jeice.dcruz@gmail.com">jeice.dcruz@gmail.com</a><button class="copy" type="button" data-copy="jeice.dcruz@gmail.com">Copy</button></li>
+        <li><span class="ck">Email</span><a href="mailto:iamjeiceee@gmail.com">iamjeiceee@gmail.com</a><button class="copy" type="button" data-copy="iamjeiceee@gmail.com">Copy</button></li>
+      </ul>
     </div>
   </section>
 </main>
 
-<footer class="wrap">© 2026 Jaysone F. Dela Cruz · Amazon &amp; E-commerce Operations</footer>
+<footer class="wrap">© 2026 Jaysone Dela Cruz · Amazon &amp; E-commerce Operations</footer>
 
 <script>
-document.getElementById('copy').addEventListener('click', async () => {
-  const out = document.getElementById('copied');
-  try { await navigator.clipboard.writeText('iamjeiceee@gmail.com'); out.textContent = 'Copied'; }
-  catch (e) { out.textContent = 'Select the address to copy it'; }
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click', async function(){
+    try { await navigator.clipboard.writeText(b.dataset.copy); b.textContent = 'Copied'; }
+    catch (e) { b.textContent = 'Select to copy'; }
+    setTimeout(function(){ b.textContent = 'Copy'; }, 2000);
+  });
 });
+
+// highlight the section in view
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.nav ul a'));
+  var map={}; links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  if(!('IntersectionObserver' in window)) return;
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ links.forEach(function(l){l.classList.remove('active');}); var a=map[e.target.id]; if(a){a.classList.add('active'); if(window.innerWidth<=980){ var ul=a.closest('ul'); if(ul) ul.scrollLeft=a.offsetLeft-ul.clientWidth/2+a.offsetWidth/2; } } } });
+  },{rootMargin:'-40% 0px -55% 0px'});
+  Object.keys(map).forEach(function(id){var el=document.getElementById(id); if(el) io.observe(el);});
+})();
 </script>
 </body>
 </html>
