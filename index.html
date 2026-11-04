@@ -210,6 +210,254 @@ section{padding:8px 0 72px}
 .cat-work div{padding:18px 20px;border-left:3px solid var(--sage);background:var(--card-soft);border-radius:0 12px 12px 0}
 .cat-work p{margin:8px 0 0;font-size:15px;color:var(--ink)}
 @media (max-width:760px){.cat-work{grid-template-columns:1fr}}
+/* demonstration projects */
+.demo-disclaimer{margin:0 0 24px;padding:14px 18px;border:1px dashed var(--taupe);border-radius:12px;background:var(--card-soft);font-size:14.5px;color:var(--ink);max-width:none}
+.dproj{margin:0 0 56px;display:grid;gap:18px}
+.dproj-head{display:grid;gap:8px;max-width:72ch}
+.dproj-head h3{font-size:28px}
+.dproj-head p{margin:0;color:var(--ink)}
+.dframe{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;color:#1f1f1f;font-family:var(--body)}
+.dlabel{display:flex;align-items:center;gap:10px;padding:10px 16px;background:#49352B;color:#F1E9DD;font:500 12.5px/1.4 var(--body)}
+.dlabel::before{content:"DEMO";flex:none;font:700 10.5px/1 var(--body);letter-spacing:.12em;padding:5px 7px;border-radius:4px;background:#B76E50;color:#fff}
+.notes{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.notes div{padding:14px 16px;border-left:3px solid var(--sage);background:var(--card-soft);border-radius:0 10px 10px 0}
+.notes .nk{font:600 11.5px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--sage)}
+.notes p{margin:8px 0 0;font-size:14px;line-height:1.5}
+.notes p.mono{font:12.5px/1.5 ui-monospace,Menlo,Consolas,monospace;color:var(--heading)}
+.notes p.small{font-size:12.5px;color:var(--muted)}
+@media (max-width:1100px){.notes{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.notes{grid-template-columns:1fr}}
+
+/* listing */
+.pdp{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px;padding:24px}
+.pdp-gallery{display:grid;grid-template-columns:64px minmax(0,1fr);gap:12px;align-self:start}
+.pdp-thumbs{display:grid;gap:8px;align-content:start}
+.th{width:64px;height:64px;padding:2px;border:1px solid #d9d9d9;border-radius:8px;background:#fff;cursor:pointer;overflow:hidden}
+.th svg{width:100%;height:100%;display:block}
+.th.on{border:2px solid #B76E50}
+.pdp-main{aspect-ratio:1/1;border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden}
+.pdp-main svg{width:100%;height:100%;display:block}
+.pdp-brand{font-size:13px;color:#8F4F35;font-weight:600}
+.pdp-title{font:500 20px/1.35 var(--body);color:#1f1f1f;margin:6px 0 10px}
+.pdp-price{font:600 26px/1 var(--body);margin:0 0 16px}
+.pdp-price small{font-size:14px;vertical-align:top;margin-right:2px}
+.vl{font-size:14px;margin:12px 0 8px}
+.sws,.szs{display:flex;flex-wrap:wrap;gap:8px}
+.sw{width:38px;height:38px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px #cfcfcf;cursor:pointer}
+.sw.on{box-shadow:0 0 0 2px #B76E50}
+.sz{min-width:70px;padding:9px 12px;border:1px solid #cfcfcf;border-radius:8px;background:#fff;font:500 14px/1 var(--body);cursor:pointer;color:#1f1f1f}
+.sz.on{border:2px solid #B76E50;padding:8px 11px;background:#fbf4ef}
+.pdp-id{margin-top:12px;font:12.5px/1.4 ui-monospace,Menlo,Consolas,monospace;color:#5F564D}
+.pdp-about h5,.pdp-desc h5{font:600 16px/1.2 var(--body);margin:20px 0 8px;color:#1f1f1f}
+.pdp-about ul{margin:0;padding-left:18px;display:grid;gap:7px;font-size:14px;line-height:1.5}
+.pdp-desc{padding:0 24px 22px;border-top:1px solid #eee}
+.pdp-desc p{margin:0;font-size:14px;line-height:1.6;max-width:90ch}
+@media (max-width:820px){.pdp{grid-template-columns:1fr}}
+
+/* variations */
+.vtree{padding:22px 24px 6px;display:grid;gap:14px}
+.vparent{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;padding:12px 16px;border-radius:10px;background:#F1E9DD;color:#49352B;font-size:14px}
+.vparent b{font:600 15px ui-monospace,Menlo,Consolas,monospace}
+.vparent code{font-size:13px}
+.vtag{font:600 11px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;padding:5px 8px;border-radius:999px;background:#49352B;color:#fff}
+.vmatrix{display:grid;grid-template-columns:90px repeat(4,minmax(0,1fr));gap:8px;overflow-x:auto}
+.vmatrix .h{font:600 12.5px/1.2 var(--body);color:#5F564D;display:flex;align-items:center;gap:6px}
+.vmatrix .h i{width:12px;height:12px;border-radius:50%;display:inline-block}
+.vcell{text-align:left;padding:10px;border:1px solid #e3e3e3;border-radius:10px;background:#fff;cursor:pointer;display:grid;gap:3px;font:12px/1.3 ui-monospace,Menlo,Consolas,monospace;color:#1f1f1f;min-width:120px}
+.vcell b{font:600 12.5px var(--body)}
+.vcell:hover{border-color:#B76E50}
+.vcell.on{border:2px solid #B76E50;padding:9px;background:#fbf4ef}
+.vhint{margin:0;font-size:12.5px;color:#5F564D}
+.vff{margin:14px 0 0;border-top:1px solid #eee}
+.vff tr.par td{background:#F7F3EC;font-weight:600}
+
+/* brand story + A+ */
+.mod-h{font:600 16px/1.2 var(--body);margin:22px 24px 12px;color:#1f1f1f;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.mod-h span{font:500 12px/1 var(--body);color:#8F4F35;letter-spacing:.06em;text-transform:uppercase}
+.bstory{display:flex;gap:12px;overflow-x:auto;padding:0 24px 8px;scroll-snap-type:x mandatory}
+.bs{flex:none;width:250px;height:300px;border-radius:10px;overflow:hidden;scroll-snap-align:start;background:#F1E9DD}
+.bs svg{width:100%;height:100%;display:block}
+.bs-hero{width:400px}
+.bs-text{padding:22px;display:flex;flex-direction:column;gap:10px;background:#2E3A4B;color:#F1E9DD}
+.bs-text b{font:400 24px/1.1 var(--display);color:#fff}
+.bs-text p{margin:0;font-size:14px;line-height:1.55}
+.bs-text strong{color:#fff}
+.bs-asins{padding:16px;display:flex;flex-direction:column;gap:10px;background:#fff;border:1px solid #eee}
+.bs-asins b{font:600 15px var(--body)}
+.bs-asins #bsAsins{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;flex:1}
+.bs-asins .mini{display:grid;grid-template-rows:1fr auto;gap:4px;font-size:11.5px;text-align:center}
+.bs-asins .mini svg{height:150px}
+.aplus{padding:0 24px 24px;display:grid;gap:16px}
+.ap-banner{border-radius:10px;overflow:hidden;aspect-ratio:970/300}
+.ap-banner svg{width:100%;height:100%;display:block}
+.ap-three{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ap-three > div{display:grid;gap:8px;align-content:start;font-size:14px}
+.ap-three b{font:600 16px var(--body)}
+.ap-three p{margin:0;line-height:1.5;color:#3a3a3a}
+.ap-ic{aspect-ratio:300/220;border-radius:10px;overflow:hidden;background:#F1E9DD}
+.ap-ic svg{width:100%;height:100%;display:block}
+.ap-split{display:grid;grid-template-columns:1.2fr 1fr;gap:20px;align-items:center}
+.ap-split b{font:400 26px/1.15 var(--display);color:#2E3A4B}
+.ap-split p{margin:10px 0 0;font-size:14.5px;line-height:1.6}
+.ap-life{border-radius:10px;overflow:hidden;aspect-ratio:4/3}
+.ap-life svg{width:100%;height:100%;display:block}
+.ap-compare{overflow-x:auto}
+.ap-compare table{width:100%;min-width:520px;border-collapse:collapse;font-size:14px}
+.ap-compare th,.ap-compare td{padding:10px 12px;border-bottom:1px solid #eee;text-align:center}
+.ap-compare tbody th{text-align:left;font-weight:600;color:#3a3a3a}
+.ap-compare thead th{font-weight:600;vertical-align:bottom}
+.ap-compare thead span{display:block;height:110px;margin-bottom:6px}
+.ap-compare thead svg{height:100%;width:auto}
+@media (max-width:760px){.ap-three,.ap-split{grid-template-columns:1fr}}
+
+
+.pm{display:grid;gap:8px}
+.pm-tag{justify-self:start;font:600 11px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;padding:5px 9px;border-radius:999px;background:#F1E9DD;color:#8F4F35}
+.navc{border:1px solid #eee;border-radius:10px;overflow:hidden}
+.navc-tabs{display:flex;overflow-x:auto;background:#2E3A4B}
+.navc-tabs button{flex:1;min-width:120px;padding:14px 12px;border:0;background:none;color:#cfd6df;font:600 14px var(--body);cursor:pointer;border-bottom:3px solid transparent}
+.navc-tabs button.on{color:#fff;border-bottom-color:#E9B98F;background:rgba(255,255,255,.06)}
+.navc-p{display:none;grid-template-columns:1.2fr 1fr;align-items:center}
+.navc-p.on{display:grid}
+.navc-img{aspect-ratio:300/220}
+.navc-img svg{width:100%;height:100%;display:block}
+.navc-t{padding:24px 28px}
+.navc-t b{font:400 26px/1.15 var(--display);color:#2E3A4B}
+.navc-t p{margin:10px 0 0;font-size:14.5px;line-height:1.6}
+.navc-dots{display:flex;justify-content:center;gap:6px;padding:10px}
+.navc-dots i{width:7px;height:7px;border-radius:50%;background:#d6d0c6}
+.navc-dots i.on{background:#2E3A4B}
+.ap-video{display:grid;grid-template-columns:1.4fr 1fr;gap:24px;align-items:center;background:#2E3A4B;border-radius:10px;padding:18px;color:#F1E9DD}
+.ap-video video{width:100%;height:auto;border-radius:8px;display:block;background:#000}
+.ap-video b{font:400 26px/1.15 var(--display);color:#fff}
+.ap-video p{margin:10px 0 0;font-size:14.5px;line-height:1.6}
+.ap-qa{display:grid;gap:8px}
+.ap-qa details{border:1px solid #eee;border-radius:10px;padding:12px 16px;background:#fff}
+.ap-qa summary{cursor:pointer;font:600 15px var(--body);color:#1f1f1f}
+.ap-qa p{margin:8px 0 0;font-size:14px;line-height:1.55;color:#3a3a3a}
+@media (max-width:760px){.navc-p,.ap-video{grid-template-columns:1fr}}
+/* store */
+.store{background:#fff}
+.st-head{aspect-ratio:1200/260;overflow:hidden}
+.st-head svg{width:100%;height:100%;display:block}
+.st-nav{display:flex;gap:4px;overflow-x:auto;padding:0 16px;border-bottom:1px solid #e6e6e6;background:#fff}
+.st-nav button{flex:none;padding:14px 14px;border:0;background:none;font:600 13px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;color:#4a4a4a;cursor:pointer;border-bottom:3px solid transparent}
+.st-nav button.on{color:#2E3A4B;border-bottom-color:#B76E50}
+.st-page{padding:20px;display:grid;gap:22px}
+.st-hero{display:grid;grid-template-columns:1fr 1fr;border-radius:10px;overflow:hidden;background:#2E3A4B;color:#F1E9DD;min-height:220px}
+.st-hero .t{padding:28px;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.st-hero .t b{font:400 30px/1.1 var(--display);color:#fff}
+.st-hero .t p{margin:0;font-size:14.5px}
+.st-hero .t button{align-self:start;padding:11px 18px;border:0;border-radius:999px;background:#B76E50;color:#fff;font:600 14px var(--body);cursor:pointer}
+.st-hero .i svg{width:100%;height:100%;display:block}
+.st-sec h6{font:600 15px/1.2 var(--body);margin:0 0 12px;color:#1f1f1f;text-transform:uppercase;letter-spacing:.06em}
+.st-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.st-tile{border:0;padding:0;border-radius:10px;overflow:hidden;background:#F1E9DD;cursor:pointer;text-align:left;font:600 15px var(--body);color:#2E3A4B}
+.st-tile svg{width:100%;height:150px;display:block}
+.st-tile span{display:block;padding:10px 14px}
+.st-colors{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.st-color{border:0;border-radius:10px;padding:16px 14px;cursor:pointer;text-align:left;color:#fff;font:600 14px var(--body);min-height:84px;display:flex;align-items:flex-end}
+.st-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.st-card{border:1px solid #ececec;border-radius:10px;overflow:hidden;display:grid;background:#fff}
+.st-card .im{background:#F7F3EC;height:180px}
+.st-card .im svg{width:100%;height:100%;display:block}
+.st-card .tx{padding:10px 12px 14px;display:grid;gap:6px;font-size:13.5px;line-height:1.35}
+.st-card .tx b{font:600 15px var(--body)}
+.st-band{border-radius:10px;padding:18px 22px;background:#F1E9DD;color:#2E3A4B;display:grid;gap:4px}
+.st-band b{font:400 24px/1.15 var(--display)}
+.st-band p{margin:0;font-size:14px}
+@media (max-width:900px){.st-grid{grid-template-columns:repeat(2,1fr)}.st-colors{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.st-hero{grid-template-columns:1fr}.st-tiles{grid-template-columns:1fr}}
+
+.caps{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.cap{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;display:grid;gap:8px;align-content:start}
+.cap b{font:600 17px/1.3 var(--body);color:var(--heading)}
+.cap p{margin:0;font-size:15px;line-height:1.55}
+@media (max-width:760px){.caps{grid-template-columns:1fr}}
+/* demo dashboards */
+.dash{padding:20px;display:grid;gap:16px;background:#FAF8F4}
+.dash-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;align-items:baseline}
+.dash-top b{font:600 16px var(--body);color:#1f1f1f}
+.dash-top span{font-size:13px;color:#5F564D}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.kpi{background:#fff;border:1px solid #ebe6de;border-radius:10px;padding:14px 16px;display:grid;gap:4px}
+.kpi .k{font:600 11.5px/1.2 var(--body);letter-spacing:.06em;text-transform:uppercase;color:#5F564D}
+.kpi .v{font:700 26px/1.1 var(--body);color:#1f1f1f;font-variant-numeric:tabular-nums}
+.kpi .d{font-size:12.5px;color:#5F564D}
+.kpi .d b{font-weight:600;color:#1f1f1f}
+.dash-grid{display:grid;gap:16px}
+.dash-grid.two{grid-template-columns:1fr 1fr}
+.dash-grid.health{grid-template-columns:1fr 1.3fr}
+.panel{background:#fff;border:1px solid #ebe6de;border-radius:10px;padding:14px 16px;display:grid;gap:10px;min-width:0}
+.ph{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:6px 14px}
+.ph b{font:600 14px var(--body);color:#1f1f1f}
+.lg{display:flex;flex-wrap:wrap;gap:12px;font-size:12.5px;color:#3a3a3a}
+.lg span{display:inline-flex;align-items:center;gap:6px}
+.lg i{display:inline-block;width:12px;height:12px;border-radius:3px}
+.lg i.ln{width:16px;height:0;border-top:2px solid #1f1f1f;border-radius:0}
+.lg i.dash-ln{border-top:2px dashed #6b6b6b}
+.chart{position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart .ax{font:11px var(--body);fill:#6b6b6b;font-variant-numeric:tabular-nums}
+.chart .grid{stroke:#ece8e1;stroke-width:1}
+.chart .base{stroke:#cfc8bd;stroke-width:1}
+.chart .tgt{stroke:#6b6b6b;stroke-width:1.5;stroke-dasharray:5 4}
+.chart .tgt-l{font:600 11px var(--body);fill:#3a3a3a}
+.chart .xh{stroke:#9a9288;stroke-width:1;opacity:0}
+.chart .hit{fill:transparent;cursor:crosshair}
+.chart .bar{transition:opacity .12s}
+.chart.hovering .bar{opacity:.45}
+.chart.hovering .bar.on{opacity:1}
+.tip{position:absolute;pointer-events:none;z-index:2;background:#1f1f1f;color:#fff;border-radius:8px;padding:8px 10px;font:12.5px/1.45 var(--body);white-space:nowrap;opacity:0;transform:translate(-50%,-100%);transition:opacity .1s;box-shadow:0 6px 16px rgba(0,0,0,.2)}
+.tip b{display:block;font-weight:600;margin-bottom:2px}
+.tip i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px}
+.tip.show{opacity:1}
+.tbl{overflow-x:auto}
+.tbl table{width:100%;min-width:640px;border-collapse:collapse;font-size:13.5px;font-variant-numeric:tabular-nums}
+.tbl th,.tbl td{padding:9px 10px;border-bottom:1px solid #f0ebe3;text-align:right;white-space:nowrap}
+.tbl th:first-child,.tbl td:first-child{text-align:left}
+.tbl th{font:600 12px var(--body);color:#5F564D;text-transform:uppercase;letter-spacing:.04em}
+.tbl td.c b{display:block;font-weight:600;color:#1f1f1f}
+.tbl td.c span{font-size:12px;color:#6b6b6b}
+.pill{display:inline-flex;align-items:center;gap:5px;padding:4px 9px;border-radius:999px;font:600 12px/1 var(--body);border:1px solid}
+.pill.good{color:#1E6B41;background:#E7F3EC;border-color:#BFDCCB}
+.pill.warn{color:#8A5A12;background:#FBF0DD;border-color:#EBD3A6}
+.pill.info{color:#2F5786;background:#E8F0F9;border-color:#C5D6EB}
+.ahr{align-content:start}
+.ahr-num{font:700 44px/1 var(--body);color:#1f1f1f}
+.ahr-bar{height:10px;border-radius:5px;background:linear-gradient(90deg,#C0392B 0 10%,#D9902F 10% 20%,#2E8B57 20% 100%);position:relative}
+.ahr-bar i{position:absolute;right:-2px;top:-5px;width:4px;height:20px;border-radius:2px;background:#1f1f1f}
+.ahr-scale{display:grid;grid-template-columns:10% 10% 1fr auto;font-size:11px;color:#6b6b6b}
+.ahr-note{margin:0;font-size:13px;color:#3a3a3a}
+.issues{list-style:none;margin:0;padding:0;display:grid;font-size:13px}
+.issues li{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid #f0ebe3}
+.issues li b{font-variant-numeric:tabular-nums}
+.mets{display:grid;gap:10px}
+.met{display:grid;grid-template-columns:1fr auto;gap:6px 12px;align-items:center;padding:10px 0;border-bottom:1px solid #f0ebe3}
+.met:last-child{border-bottom:0}
+.met .n{font:600 14px var(--body);color:#1f1f1f}
+.met .t{font-size:12px;color:#6b6b6b}
+.met .v{font:700 20px/1 var(--body);text-align:right;font-variant-numeric:tabular-nums}
+.met .track{grid-column:1 / -1;height:6px;border-radius:3px;background:#f0ebe3;position:relative}
+.met .track i{position:absolute;left:0;top:0;bottom:0;border-radius:3px;background:#3A6EA5}
+.met .track b{position:absolute;top:-4px;width:2px;height:14px;background:#6b6b6b}
+
+.ph-s{font-size:12.5px;color:#6b6b6b}
+.cstruct{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.cs{border:1px solid #ebe6de;border-radius:10px;padding:14px;display:grid;gap:8px;align-content:start;background:#FAF8F4}
+.cs-h b{display:block;font:600 15px var(--body);color:#1f1f1f}
+.cs-h span{font-size:12.5px;color:#8F4F35;font-weight:600}
+.cs p{margin:0;font-size:13px;color:#5F564D}
+.cs ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.cs li{font:500 12.5px/1 var(--body);padding:6px 9px;border-radius:999px;background:#fff;border:1px solid #e3ddd3;color:#2E3A4B}
+.cs-f{font:600 12px var(--body);color:#5F564D}
+.tbl tr.grp td{background:#F1E9DD;border-bottom-color:#e3d7c4}
+.tbl tr.tot td{background:#2E3A4B;color:#fff;font-weight:600}
+.tbl tr.tot td.c b{color:#fff}.tbl tr.tot td.c span{color:#cfd6df}
+.tbl td.sub{padding-left:24px}
+@media (max-width:900px){.cstruct{grid-template-columns:1fr}}
+@media (max-width:1100px){.kpis{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:860px){.dash-grid.two,.dash-grid.health{grid-template-columns:1fr}}
 /* reviews */
 .score-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:20px}
 .month{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;display:grid;gap:10px;align-content:start}
@@ -357,50 +605,316 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:13.5px}
 
   <section id="work" aria-labelledby="work-h">
     <div class="sec-head"><h2 id="work-h">Work samples</h2></div>
-    <p class="lead">Live Amazon pages, Seller Central dashboards and trackers from accounts I've worked on. Brand names, packaging, prices, sales figures and account details are blurred to protect the clients.</p>
-    <h3 class="group">Listings, variations &amp; brand content</h3>
-    <div class="samples">
-      <figure class="sample">
-        <a href="img/listing-vanilla.jpg" title="Open full size"><img src="img/listing-vanilla.jpg" alt="Amazon product page with a scent and size variation selector and a filled attribute table; brand and prices blurred" width="1600" height="800" loading="lazy"></a>
-        <figcaption><span class="kind">Variations · Attributes</span><b>Two-dimension variation family</b><span>Parent-child family built on Scent × Size: four scents and two pack sizes under one detail page, with Scent, Product Benefits, Recommended Uses and Material Type Free attributes filled in.</span></figcaption>
-      </figure>
-      <figure class="sample">
-        <a href="img/variation-greentea.jpg" title="Open full size"><img src="img/variation-greentea.jpg" alt="Same Amazon variation family switched to a different scent child; brand and prices blurred" width="1600" height="740" loading="lazy"></a>
-        <figcaption><span class="kind">Variations · QA</span><b>Child-level check after going live</b><span>Clicking through each child to confirm it maps to the right scent and size, and that every child has its own title, attributes and images.</span></figcaption>
-      </figure>
-      <figure class="sample">
-        <a href="img/brand-story.jpg" title="Open full size"><img src="img/brand-story.jpg" alt="Amazon From the Brand carousel with a Made in USA card, a lifestyle photo and a Shop New Products card; brand logo blurred" width="1600" height="712" loading="lazy"></a>
-        <figcaption><span class="kind">Brand Story</span><b>“From the brand” carousel</b><span>Brand Story module built in Seller Central: a brand-promise card, a lifestyle image and a cross-sell card that links to the Brand Store.</span></figcaption>
-      </figure>
-      <figure class="sample">
-        <a href="img/aplus-module.jpg" title="Open full size"><img src="img/aplus-module.jpg" alt="Premium A+ Content carousel showing ingredients with a Clean and Gentle Formula section below" width="1600" height="805" loading="lazy"></a>
-        <figcaption><span class="kind">A+ Content</span><b>Premium A+ carousel and benefit icons</b><span>Content-manager designs from Figma turned into A+ modules: an ingredient carousel followed by a “clean formula” benefits row.</span></figcaption>
-      </figure>
-      <figure class="sample">
-        <a href="img/listing-sizes.jpg" title="Open full size"><img src="img/listing-sizes.jpg" alt="Amazon product page with a five-option pack-size variation selector; brand, packaging and prices blurred" width="1600" height="784" loading="lazy"></a>
-        <figcaption><span class="kind">Variations · Size</span><b>Pack-size variation family</b><span>A single-dimension Size family with Pack of 1, 2, 3, 4 and 6. Each child has its own price, per-ounce price and delivery estimate, and attributes such as Item Form, Hair Type, Scent and Age Range are filled in.</span></figcaption>
-      </figure>
-      <figure class="sample">
-        <a href="img/brand-store.jpg" title="Open full size"><img src="img/brand-store.jpg" alt="Amazon Brand Store home page with category navigation, a best-sellers carousel and Shop Syrups and Shop Sauces tiles; brand and products blurred" width="1600" height="780" loading="lazy"></a>
-        <figcaption><span class="kind">Brand Store</span><b>Brand Store home and category navigation</b><span>Store built in Seller Central with a top navigation by product line (syrups, sauces, purées, concentrates, beverage boosts), a best-sellers carousel and image tiles that link to each category page.</span></figcaption>
-      </figure>
-      <figure class="sample wide">
-        <div class="ff" role="region" aria-label="Variation flat-file template" tabindex="0">
+    <p class="lead">Original demonstration projects showing how I build and organize Amazon listings, variations, brand content and storefronts, plus sample dashboards for advertising, reporting and account health. All data is fictional.</p>
+    <h3 class="group">Demonstration projects</h3>
+    <p class="demo-disclaimer"><b>Demonstration projects</b> created to showcase my Amazon marketplace skills. Not affiliated with or representative of an actual client. “Aqualuxe” is a fictional brand; all copy, SKUs, ASINs and illustrations are original.</p>
+
+    <!-- 1. Listing -->
+    <article class="dproj" id="demo-listing">
+      <header class="dproj-head">
+        <span class="kind">01 · Product listing optimization</span>
+        <h3>Product Listing Optimization</h3>
+        <p>Wrote and optimized Amazon product listings, including keyword-led titles, benefit-focused bullet points, product descriptions, backend search terms and image stacks built to each category's style guide.</p>
+      </header>
+      <div class="dframe">
+        <div class="dlabel">Demonstration project created to showcase my Amazon marketplace skills. Not affiliated with or representative of an actual client.</div>
+        <div class="pdp">
+          <div class="pdp-gallery">
+            <div class="pdp-thumbs" role="tablist" aria-label="Listing images">
+              <button class="th on" data-img="main" aria-label="Main image"></button>
+              <button class="th" data-img="sizes" aria-label="Size chart image"></button>
+              <button class="th" data-img="info" aria-label="Infographic image"></button>
+              <button class="th" data-img="life" aria-label="Lifestyle image"></button>
+            </div>
+            <div class="pdp-main" id="pdpMain"></div>
+          </div>
+          <div class="pdp-info">
+            <div class="pdp-brand">Brand: Aqualuxe</div>
+            <h4 class="pdp-title" id="pdpTitle"></h4>
+            <div class="pdp-price"><span id="pdpPrice"></span></div>
+            <div class="pdp-var">
+              <div class="vl">Color: <b id="pdpColorName"></b></div>
+              <div class="sws" id="pdpColors"></div>
+              <div class="vl">Size: <b id="pdpSizeName"></b></div>
+              <div class="szs" id="pdpSizes"></div>
+              <div class="pdp-id" id="pdpId"></div>
+            </div>
+            <div class="pdp-about">
+              <h5>About this item</h5>
+              <ul>
+                <li><b>COLD FOR 24 HOURS, HOT FOR 12:</b> Double-wall vacuum insulation keeps ice in your water through a full day and coffee warm into the afternoon, with no sweating on the outside.</li>
+                <li><b>LEAK-PROOF STRAW LID:</b> The flip-up straw clicks shut, so the bottle can ride in a backpack or gym bag without spills. The carry loop doubles as a finger grip.</li>
+                <li><b>SIZED FOR YOUR DAY:</b> The 18 oz and 24 oz sizes fit most car cup holders. The 32 oz holds close to a liter for long shifts, hikes and workouts.</li>
+                <li><b>EASY TO CLEAN:</b> The wide mouth fits ice cubes and a bottle brush. The lid and straw are top-rack dishwasher safe; hand-wash the powder-coated body.</li>
+                <li><b>DURABLE, FOOD-SAFE MATERIALS:</b> 18/8 stainless steel, a BPA-free lid and a chip-resistant powder-coat finish in four colors.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pdp-desc">
+          <h5>Product description</h5>
+          <p>The Aqualuxe Insulated Water Bottle is built for long days away from the kitchen. Fill it with ice water in the morning and it is still cold at night. The straw lid locks closed for travel and opens with one thumb, and the stainless steel body won't hold flavors or odors. Pick the size that fits your routine: 18 oz for the commute, 24 oz for the office or gym, 32 oz for hikes and long shifts.</p>
+        </div>
+      </div>
+      <div class="notes">
+        <div><span class="nk">Title</span><p>Brand + product type + top feature + size + key benefits + color. The main keyword comes first, and the title stays under 200 characters.</p></div>
+        <div><span class="nk">Bullets</span><p>One benefit per bullet with a capitalized header for skimming. Each one answers a common buyer question: how long it stays cold, leaks, cup-holder fit, cleaning and materials.</p></div>
+        <div><span class="nk">Images</span><p>Main image on pure white with the product filling about 85% of the frame, followed by a size chart, a feature infographic and a lifestyle shot.</p></div>
+        <div><span class="nk">Backend terms</span><p class="mono">insulated bottle straw lid reusable gym hiking travel 1 liter cup holder metal flask thermos ice cold sweat free</p><p class="small">112 bytes (limit 249). No brand names, no ASINs and no words already in the title.</p></div>
+      </div>
+    </article>
+
+    <!-- 2. Variations -->
+    <article class="dproj" id="demo-variations">
+      <header class="dproj-head">
+        <span class="kind">02 · Parent-child variations</span>
+        <h3>Parent-Child Variation Management</h3>
+        <p>Built and corrected parent-child variation families, including variation themes, child SKU and ASIN mapping, size and color attributes, and flat-file uploads across large catalogs.</p>
+      </header>
+      <div class="dframe">
+        <div class="dlabel">Demonstration project created to showcase my Amazon marketplace skills. Not affiliated with or representative of an actual client.</div>
+        <div class="vtree">
+          <div class="vparent">
+            <span class="vtag">Parent · not buyable</span>
+            <b>AQL-WB-PARENT</b>
+            <span>ASIN B0DEMO0000 · Theme: <code>SizeName-ColorName</code></span>
+          </div>
+          <div class="vmatrix" id="vMatrix"></div>
+          <p class="vhint">Click a child to load it in the listing demo above.</p>
+        </div>
+        <div class="ff vff" role="region" aria-label="Flat-file rows for the variation family" tabindex="0">
           <table>
             <thead>
-              <tr><th colspan="3">Listing Identity</th><th colspan="3">Variations</th><th colspan="3">Product Identity</th><th colspan="3">Product Details</th></tr>
-              <tr><th>SKU</th><th>Product Type</th><th>Listing Action</th><th>Parentage Level</th><th>Parent SKU</th><th>Variation Theme</th><th>Item Name</th><th>Brand Name</th><th>Product Id Type</th><th>Flavor</th><th>Size</th><th>Unit Count</th></tr>
+              <tr><th colspan="3">Listing Identity</th><th colspan="3">Variations</th><th colspan="5">Product Details</th></tr>
+              <tr><th>SKU</th><th>Product Type</th><th>Listing Action</th><th>Parentage Level</th><th>Parent SKU</th><th>Variation Theme</th><th>Size</th><th>Color</th><th>Color Map</th><th>ASIN</th><th>List Price</th></tr>
             </thead>
-            <tbody>
-              <tr><td class="r" style="--w:90px"></td><td>SUGAR_SUBSTITUTE</td><td>Edit (Partial Update)</td><td class="p">Parent</td><td></td><td class="c">FLAVOR/SIZE</td><td class="r" style="--w:220px"></td><td class="r" style="--w:70px"></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td class="r" style="--w:90px"></td><td>SUGAR_SUBSTITUTE</td><td>Edit (Partial Update)</td><td class="p">Child</td><td class="r" style="--w:90px"></td><td class="c">FLAVOR/SIZE</td><td class="r" style="--w:240px"></td><td class="r" style="--w:70px"></td><td>ASIN</td><td>Chocolate</td><td class="r" style="--w:60px"></td><td class="r" style="--w:30px"></td></tr>
-              <tr><td class="r" style="--w:90px"></td><td>SUGAR_SUBSTITUTE</td><td>Edit (Partial Update)</td><td class="p">Child</td><td class="r" style="--w:90px"></td><td class="c">FLAVOR/SIZE</td><td class="r" style="--w:230px"></td><td class="r" style="--w:70px"></td><td>ASIN</td><td>Chocolate</td><td class="r" style="--w:60px"></td><td class="r" style="--w:30px"></td></tr>
-            </tbody>
+            <tbody id="vRows"></tbody>
           </table>
-          <div class="note">Column groups and valid values are taken from the Amazon category template. Product rows are placeholders, and SKUs, titles and the brand are hidden.</div>
         </div>
-        <figcaption><span class="kind">Flat files</span><b>Variation template for a grocery family</b><span>The Amazon flat file I fill in to attach existing ASINs to a parent under the FLAVOR/SIZE theme. I set the parentage, parent SKU and theme in bulk instead of editing each listing one at a time.</span></figcaption>
-      </figure>
+      </div>
+      <div class="notes">
+        <div><span class="nk">Parent</span><p>The parent row holds the shared title, brand and product type but has no price, inventory or color, so Amazon treats it as a grouping only.</p></div>
+        <div><span class="nk">Children</span><p>Every child carries the same theme and Parent SKU, plus its own size, color, color map, main image and price.</p></div>
+        <div><span class="nk">Naming</span><p>The SKU pattern brand-product-size-color (AQL-WB24-SAG) makes the family easy to audit and sort in Excel.</p></div>
+        <div><span class="nk">QA</span><p>After upload, I click through every child on the live page to check the swatch, image and price match the intended child.</p></div>
+      </div>
+    </article>
+
+    <!-- 3. Brand Story + A+ -->
+    <article class="dproj" id="demo-aplus">
+      <header class="dproj-head">
+        <span class="kind">03 · Brand Story &amp; A+ Content</span>
+        <h3>Brand Story &amp; A+ Content</h3>
+        <p>Built Brand Story carousels and A+ Content modules in Seller Central, turning designs into banners, feature modules, comparison charts and brand-focused layouts that answer buyer questions before they ask.</p>
+      </header>
+      <div class="dframe">
+        <div class="dlabel">Demonstration project created to showcase my Amazon marketplace skills. Not affiliated with or representative of an actual client.</div>
+        <h5 class="mod-h">From the brand <span>Brand Story carousel</span></h5>
+        <div class="bstory" tabindex="0" role="region" aria-label="Brand Story carousel">
+          <div class="bs bs-hero" id="bsHero"></div>
+          <div class="bs bs-text"><b>Our story</b><p>Aqualuxe started with a nurse working 12-hour shifts who couldn't find a bottle that stayed cold until the end of the day. We make simple, sturdy bottles that keep drinks the way you poured them.</p></div>
+          <div class="bs bs-img" id="bsImg"></div>
+          <div class="bs bs-asins"><b>Shop the collection</b><div id="bsAsins"></div></div>
+          <div class="bs bs-text"><b>Questions?</b><p><strong>Dishwasher safe?</strong> Lid and straw, top rack.<br><strong>Fits cup holders?</strong> 18 oz and 24 oz do.<br><strong>Hot drinks?</strong> Up to 12 hours.</p></div>
+        </div>
+
+        <h5 class="mod-h">Premium A+ Content <span>6 premium modules</span></h5>
+        <div class="aplus">
+          <div class="pm"><span class="pm-tag">Premium Full Image</span>
+            <div class="ap-banner" id="apBanner"></div>
+          </div>
+
+          <div class="pm"><span class="pm-tag">Premium Navigation Carousel</span>
+            <div class="navc">
+              <div class="navc-tabs" role="tablist" aria-label="Product features">
+                <button role="tab" class="on" data-t="0">Insulation</button>
+                <button role="tab" data-t="1">Straw lid</button>
+                <button role="tab" data-t="2">Colors &amp; sizes</button>
+                <button role="tab" data-t="3">Easy care</button>
+              </div>
+              <div class="navc-panels">
+                <div class="navc-p on"><div class="navc-img" id="apIc1"></div><div class="navc-t"><b>Double-wall vacuum insulation</b><p>Two steel walls with a vacuum between them keep ice for 24 hours and coffee hot for 12. No condensation rings on your desk.</p></div></div>
+                <div class="navc-p"><div class="navc-img" id="apIc2"></div><div class="navc-t"><b>Click-lock straw lid</b><p>The straw folds down and clicks shut, so the bottle can ride on its side in a backpack. The carry loop doubles as a finger grip.</p></div></div>
+                <div class="navc-p"><div class="navc-img" id="apIc3"></div><div class="navc-t"><b>Four colors, three sizes</b><p>Sage, Clay, Midnight and Sand in 18, 24 and 32 oz, so every child in the variation family has its own color and size image.</p></div></div>
+                <div class="navc-p"><div class="navc-img" id="apIc4"></div><div class="navc-t"><b>Easy to clean</b><p>A wide mouth fits ice and a bottle brush. The lid and straw are top-rack dishwasher safe; hand-wash the powder-coated body.</p></div></div>
+              </div>
+              <div class="navc-dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+
+          <div class="pm"><span class="pm-tag">Premium Video with Text</span>
+            <div class="ap-video">
+              <video controls muted playsinline preload="metadata" poster="media/poster.jpg" aria-label="Aqualuxe demo product video, 8 seconds, no audio">
+                <source src="media/aqualuxe-aplus.mp4" type="video/mp4">
+              </video>
+              <div><b>See it in 8 seconds</b><p>A short, silent product video: the cold-hold promise, the click-lock lid, then all four colors. Captions are built into the frames, so it works with the sound off.</p></div>
+            </div>
+          </div>
+
+          <div class="pm"><span class="pm-tag">Premium Single Image with Text</span>
+            <div class="ap-split">
+              <div class="ap-life" id="apLife"></div>
+              <div><b>Made for the long day</b><p>From the morning commute to the last hour of a shift, one fill is enough. The powder-coat finish keeps its grip with wet hands and doesn't chip when it's dropped.</p></div>
+            </div>
+          </div>
+
+          <div class="pm"><span class="pm-tag">Premium Comparison Chart</span>
+            <div class="ap-compare" role="region" aria-label="Size comparison chart" tabindex="0">
+              <table>
+                <thead><tr><th></th><th><span id="cmp18"></span>18 oz</th><th><span id="cmp24"></span>24 oz</th><th><span id="cmp32"></span>32 oz</th></tr></thead>
+                <tbody>
+                  <tr><th>Capacity</th><td>532 ml</td><td>710 ml</td><td>946 ml</td></tr>
+                  <tr><th>Keeps cold</th><td>24 hours</td><td>24 hours</td><td>24 hours</td></tr>
+                  <tr><th>Keeps hot</th><td>12 hours</td><td>12 hours</td><td>12 hours</td></tr>
+                  <tr><th>Fits most cup holders</th><td>Yes</td><td>Yes</td><td>No</td></tr>
+                  <tr><th>Height</th><td>9.1 in</td><td>10.2 in</td><td>11.4 in</td></tr>
+                  <tr><th>Best for</th><td>Commute</td><td>Office &amp; gym</td><td>Hikes &amp; long shifts</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="pm"><span class="pm-tag">Premium Q&amp;A</span>
+            <div class="ap-qa">
+              <details open><summary>Will it fit my car's cup holder?</summary><p>The 18 oz and 24 oz sizes fit most standard cup holders. The 32 oz is wider at the base.</p></details>
+              <details><summary>Can I put hot drinks in it?</summary><p>Yes. It keeps drinks hot for up to 12 hours. Keep the straw lid closed and sip slowly at first.</p></details>
+              <details><summary>Is it dishwasher safe?</summary><p>The lid and straw are top-rack safe. Hand-wash the body to protect the powder-coat finish.</p></details>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="notes">
+        <div><span class="nk">Brand Story</span><p>Logo card, origin story, lifestyle image, ASIN showcase and a quick Q&amp;A card. The showcase card cross-sells the rest of the catalog.</p></div>
+        <div><span class="nk">Module order</span><p>Full-image banner for the main promise, a navigation carousel for the four key features, a short video, a lifestyle module, a comparison chart and a Q&amp;A, so the size question is answered just before the buy box.</p></div>
+        <div><span class="nk">Copy</span><p>Short lines that can be read on a phone, with key words kept as live text rather than baked into images so they can be indexed.</p></div>
+        <div><span class="nk">Images</span><p>Every illustration here is original and drawn for this demo. For real brands I use only client-owned or properly licensed photography.</p></div>
+      </div>
+    </article>
+
+    <!-- 4. Brand Store -->
+    <article class="dproj" id="demo-store">
+      <header class="dproj-head">
+        <span class="kind">04 · Amazon Brand Store</span>
+        <h3>Amazon Brand Store Development</h3>
+        <p>Managed the creation and optimization of Amazon Brand Stores, including category organization, storefront navigation, promotional banners, product collections, and brand-focused presentation.</p>
+      </header>
+      <div class="dframe">
+        <div class="dlabel">Demonstration project created to showcase my Amazon marketplace skills. Not affiliated with or representative of an actual client.</div>
+        <div class="store">
+          <div class="st-head" id="stHead"></div>
+          <nav class="st-nav" aria-label="Demo store pages">
+            <button data-page="home" class="on">Home</button>
+            <button data-page="bottles">Water Bottles</button>
+            <button data-page="tumblers">Tumblers</button>
+            <button data-page="accessories">Accessories</button>
+            <button data-page="gifts">Gift Sets</button>
+          </nav>
+          <div class="st-page" id="stPage"></div>
+        </div>
+      </div>
+      <div class="notes">
+        <div><span class="nk">Navigation</span><p>Pages follow the product lines buyers shop by (bottles, tumblers, accessories, gift sets), with no more than one level deep.</p></div>
+        <div><span class="nk">Home page</span><p>A hero banner with one clear call to action, shop-by-size and shop-by-color tiles that mirror the variation attributes, then a best-sellers grid.</p></div>
+        <div><span class="nk">Collections</span><p>Each category page opens with a short banner and a product grid, so every tile on the home page has a matching destination.</p></div>
+        <div><span class="nk">Seasonal</span><p>The Gift Sets page is where seasonal banners and bundles rotate in for Prime Day and the holidays without changing the rest of the store.</p></div>
+      </div>
+    </article>
+
+    <h3 class="group">Advertising, reporting &amp; account health</h3>
+
+    <article class="dproj" id="demo-ppc">
+      <header class="dproj-head">
+        <span class="kind">05 · Amazon PPC</span>
+        <h3>Campaign Management &amp; Optimization</h3>
+        <p>Built and managed Sponsored Products and Sponsored Brands (video and headline banner) campaigns, each split into Exact, Phrase, Broad, Categories, Auto, Competitor and Keyword targeting, on accounts doing $500K–$1.5M in monthly sales, with $4,000–$8,000 in daily spend, and held ACoS at 19–20% against a 21% target at roughly 5× ROAS.</p>
+      </header>
+      <div class="dframe">
+        <div class="dlabel">Demonstration project created to showcase my Amazon marketplace skills. Not affiliated with or representative of an actual client.</div>
+        <div class="dash">
+          <div class="dash-top"><b>Aqualuxe · Sponsored ads</b><span>Oct 1 – Oct 31, 2026 · sample data</span></div>
+          <div class="kpis" id="ppcKpis"></div>
+          <div class="dash-grid two">
+            <div class="panel"><div class="ph"><b>Ad sales and ad spend, daily</b><div class="lg" id="ppcLg"></div></div><div class="chart" id="chPpc"></div></div>
+            <div class="panel"><div class="ph"><b>ACoS, daily</b><div class="lg"><span><i class="ln dash-ln"></i>21% target</span></div></div><div class="chart" id="chAcos"></div></div>
+          </div>
+          <div class="panel"><div class="ph"><b>Campaign structure</b><span class="ph-s">Naming: Brand | Campaign type | Targeting</span></div><div class="cstruct" id="ppcStruct"></div></div>
+          <div class="panel"><div class="ph"><b>Campaign performance</b><span class="ph-s">October 2026 · sample data</span></div>
+            <div class="tbl" role="region" aria-label="Campaign performance table" tabindex="0"><table id="ppcTable"></table></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="dproj" id="demo-tacos">
+      <header class="dproj-head">
+        <span class="kind">06 · TACoS tracking</span>
+        <h3>TACoS Monitoring</h3>
+        <p>Built Google Sheets trackers comparing ad spend with total sales by day, week and month against the same period last year, and flagged anything that drifted above the TACoS target.</p>
+      </header>
+      <div class="dframe">
+        <div class="dlabel">Demonstration project created to showcase my Amazon marketplace skills. Not affiliated with or representative of an actual client.</div>
+        <div class="dash">
+          <div class="dash-top"><b>Aqualuxe · Total sales and TACoS</b><span>Nov 2025 – Oct 2026 · sample data</span></div>
+          <div class="kpis" id="tacosKpis"></div>
+          <div class="dash-grid two">
+            <div class="panel"><div class="ph"><b>Total sales, monthly</b></div><div class="chart" id="chTotal"></div></div>
+            <div class="panel"><div class="ph"><b>TACoS, monthly</b><div class="lg"><span><i class="ln dash-ln"></i>18% target</span></div></div><div class="chart" id="chTacos"></div></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="dproj" id="demo-reports">
+      <header class="dproj-head">
+        <span class="kind">07 · Business reports</span>
+        <h3>Performance Reporting</h3>
+        <p>Pulled Seller Central Business Reports and Sales Dashboard data into monthly client updates: year-over-year sales, sessions, conversion rate, average selling price and units per order.</p>
+      </header>
+      <div class="dframe">
+        <div class="dlabel">Demonstration project created to showcase my Amazon marketplace skills. Not affiliated with or representative of an actual client.</div>
+        <div class="dash">
+          <div class="dash-top"><b>Aqualuxe · Business report</b><span>Jan – Oct 2026 vs 2025 · sample data</span></div>
+          <div class="kpis" id="repKpis"></div>
+          <div class="panel"><div class="ph"><b>Ordered product sales, this year vs last year</b><div class="lg" id="yoyLg"></div></div><div class="chart" id="chYoy"></div></div>
+          <div class="dash-grid two">
+            <div class="panel"><div class="ph"><b>Sessions, monthly</b></div><div class="chart" id="chSess"></div></div>
+            <div class="panel"><div class="ph"><b>Conversion rate (unit session %), monthly</b></div><div class="chart" id="chConv"></div></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="dproj" id="demo-health">
+      <header class="dproj-head">
+        <span class="kind">08 · Account health</span>
+        <h3>Account Health Management</h3>
+        <p>Monitored the Account Health Rating, order defect rate, policy compliance and shipping metrics, and resolved suppressions and compliance cases before they could affect the rating.</p>
+      </header>
+      <div class="dframe">
+        <div class="dlabel">Demonstration project created to showcase my Amazon marketplace skills. Not affiliated with or representative of an actual client.</div>
+        <div class="dash">
+          <div class="dash-top"><b>Aqualuxe · Account health</b><span>Last 60 days · sample data</span></div>
+          <div class="dash-grid health">
+            <div class="panel ahr">
+              <div class="ph"><b>Account Health Rating</b><span class="pill good">✓ Healthy</span></div>
+              <div class="ahr-num">1000</div>
+              <div class="ahr-bar" aria-hidden="true"><i></i></div>
+              <div class="ahr-scale"><span>0</span><span>100</span><span>200</span><span>1000</span></div>
+              <p class="ahr-note">Rating reflects adherence to selling policies. 0 open policy issues.</p>
+              <ul class="issues" id="issues"></ul>
+            </div>
+            <div class="panel">
+              <div class="ph"><b>Performance targets</b></div>
+              <div class="mets" id="mets"></div>
+            </div>
+          </div>
+          <div class="panel"><div class="ph"><b>Order defect rate, weekly</b><div class="lg"><span><i class="ln dash-ln"></i>1% target</span></div></div><div class="chart" id="chOdr"></div></div>
+        </div>
+      </div>
+    </article>
+
+    <h3 class="group">Workflow</h3>
+    <div class="samples">
       <figure class="sample wide">
         <div class="ff" role="region" aria-label="Listing specialist workflow tracker" tabindex="0">
           <table class="trk">
@@ -415,38 +929,6 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:13.5px}
           </table>
         </div>
         <figcaption><span class="kind">Workflow</span><b>Listing specialist task tracker</b><span>How I track each catalog workstream from done to next step to follow-up, so nothing stalls between submission and approval.</span></figcaption>
-      </figure>
-    </div>
-
-    <h3 class="group">Advertising &amp; reporting</h3>
-    <div class="samples">
-      <figure class="sample">
-        <a href="img/ppc-year.jpg" title="Open full size"><img src="img/ppc-year.jpg" alt="Amazon Ads campaign manager 12-month performance chart of spend, sales, purchases and impressions; totals and axis values blurred" width="1600" height="400" loading="lazy"></a>
-        <figcaption><span class="kind">Amazon Ads</span><b>12-month campaign performance</b><span>Year view in Campaign Manager tracking spend, sales, purchases and impressions month by month, used to compare seasonal peaks and keep the budget steady across the year.</span></figcaption>
-      </figure>
-      <figure class="sample">
-        <a href="img/ppc-october.jpg" title="Open full size"><img src="img/ppc-october.jpg" alt="Amazon Ads daily performance chart for October 2026; totals and axis values blurred" width="1600" height="353" loading="lazy"></a>
-        <figcaption><span class="kind">Amazon Ads</span><b>Daily pacing for the month</b><span>Day-by-day view for October. I used it to catch spend spikes, read late-month ramps and check that sales kept pace with cost.</span></figcaption>
-      </figure>
-      <figure class="sample">
-        <a href="img/tacos-tracker.jpg" title="Open full size"><img src="img/tacos-tracker.jpg" alt="Google Sheets TACoS monitoring tracker with daily, weekly and month-to-date TACoS against an 18 percent target; client name and dollar values blurred" width="1389" height="467" loading="lazy"></a>
-        <figcaption><span class="kind">TACoS tracking</span><b>Daily TACoS monitor against an 18% target</b><span>A sheet I kept to compare ad spend with total sales each day, week and month against the same period last year. Daily TACoS ran mostly between 15% and 18%, around the 18% target.</span></figcaption>
-      </figure>
-      <figure class="sample">
-        <a href="img/sales-snapshot.jpg" title="Open full size"><img src="img/sales-snapshot.jpg" alt="Seller Central Sales Dashboard comparing this year with last year for units and sales; figures blurred" width="1600" height="621" loading="lazy"></a>
-        <figcaption><span class="kind">Business reports</span><b>Year-over-year sales check</b><span>Sales Dashboard comparison of this year against last year for units and ordered sales, used in monthly client updates to explain trends.</span></figcaption>
-      </figure>
-      <figure class="sample wide">
-        <a href="img/business-report.jpg" title="Open full size"><img src="img/business-report.jpg" alt="Seller Central Business Report by month with averages, selling price and order item session percentage visible; sales, units and sessions blurred" width="1600" height="747" loading="lazy"></a>
-        <figcaption><span class="kind">Business reports</span><b>Monthly business report review</b><span>Month-by-month report for a full year: average selling price, units per order and conversion (order item session %), which stayed between 21% and 25%. Raw sales, units and sessions are hidden.</span></figcaption>
-      </figure>
-    </div>
-
-    <h3 class="group">Account health</h3>
-    <div class="samples">
-      <figure class="sample wide">
-        <a href="img/account-health.jpg" title="Open full size"><img src="img/account-health.jpg" alt="Seller Central Account Health page with a 1000 Account Health Rating, healthy policy compliance, zero issues and shipping metrics above target; order counts blurred" width="1600" height="771" loading="lazy"></a>
-        <figcaption><span class="kind">Account health</span><b>Healthy account: 1000 AHR, zero policy issues</b><span>The account I monitored: Account Health Rating at the 1000 maximum, 0 issues in every policy category, a 0.04% order defect rate against a 1% target, and 99.81% valid tracking and 99.68% on-time delivery.</span></figcaption>
       </figure>
     </div>
   </section>
@@ -606,6 +1088,247 @@ document.querySelectorAll('.copy').forEach(function(b){
   },{rootMargin:'-40% 0px -55% 0px'});
   Object.keys(map).forEach(function(id){var el=document.getElementById(id); if(el) io.observe(el);});
 })();
+// ---------- Aqualuxe demo (fictional brand) ----------
+(function(){
+var C={sage:{n:'Sage',b:'#8FA58A',d:'#6F8769',k:'SAG',t:'#fff'},clay:{n:'Clay',b:'#C27D5E',d:'#A0614A',k:'CLY',t:'#fff'},midnight:{n:'Midnight',b:'#2E3A4B',d:'#1F2835',k:'MID',t:'#fff'},sand:{n:'Sand',b:'#D9C7A8',d:'#BFAA87',k:'SND',t:'#5b4a35'}};
+var ORDER=['sage','clay','midnight','sand'];
+var S={18:{p:'24.99',sc:.84},24:{p:'27.99',sc:1},32:{p:'31.99',sc:1.16}};
+var SIZES=[18,24,32];
+function asin(sz,c){return 'B0DEMO'+sz+('0'+(ORDER.indexOf(c)+1));}
+function sku(sz,c){return 'AQL-WB'+sz+'-'+C[c].k;}
+// bottle drawn on a 200x300 canvas, base at y=272
+function bottle(c,sz,x,y,s){
+  var k=C[c],sc=(S[sz]?S[sz].sc:1)*(s||1);
+  return '<g transform="translate('+(x||0)+' '+(y||0)+') translate(100 272) scale('+sc+') translate(-100 -272)">'+
+   '<ellipse cx="100" cy="274" rx="44" ry="6" fill="#000" opacity=".08"/>'+
+   '<path d="M80 50 C80 18 120 18 120 50" fill="none" stroke="#2b2b2b" stroke-width="6"/>'+
+   '<rect x="92" y="28" width="16" height="22" rx="6" fill="#2b2b2b"/>'+
+   '<rect x="72" y="44" width="56" height="26" rx="9" fill="#2b2b2b"/>'+
+   '<rect x="76" y="66" width="48" height="30" rx="10" fill="'+k.d+'"/>'+
+   '<rect x="58" y="88" width="84" height="184" rx="24" fill="'+k.b+'"/>'+
+   '<rect x="58" y="246" width="84" height="26" rx="12" fill="'+k.d+'"/>'+
+   '<rect x="70" y="102" width="10" height="132" rx="5" fill="#fff" opacity=".22"/>'+
+   '<text x="100" y="168" text-anchor="middle" font-family="DM Sans,Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="2.5" fill="'+k.t+'" opacity=".9">AQUALUXE</text>'+
+   '<path d="M86 178 q7 -6 14 0 t14 0" fill="none" stroke="'+k.t+'" stroke-width="1.6" opacity=".8"/>'+
+  '</g>';
+}
+function tumbler(c,x,y,s){
+  var k=C[c];return '<g transform="translate('+x+' '+y+') scale('+(s||1)+')">'+
+   '<ellipse cx="100" cy="274" rx="48" ry="6" fill="#000" opacity=".08"/>'+
+   '<rect x="97" y="30" width="7" height="50" rx="3" fill="#cfcfcf" transform="rotate(10 100 55)"/>'+
+   '<rect x="56" y="70" width="92" height="20" rx="8" fill="#2b2b2b"/>'+
+   '<path d="M60 90 L140 90 L130 200 Q128 210 120 214 L120 272 L80 272 L80 214 Q72 210 70 200 Z" fill="'+k.b+'"/>'+
+   '<path d="M138 110 q36 6 30 50 q-4 26 -36 32" fill="none" stroke="'+k.d+'" stroke-width="12" stroke-linecap="round"/>'+
+   '<rect x="74" y="100" width="8" height="90" rx="4" fill="#fff" opacity=".22"/>'+
+   '<text x="100" y="150" text-anchor="middle" font-family="DM Sans,Arial,sans-serif" font-size="9" font-weight="700" letter-spacing="2" fill="'+k.t+'" opacity=".9">AQUALUXE</text></g>';
+}
+function lids(x,y){return '<g transform="translate('+x+' '+y+')">'+
+  [0,1].map(function(i){var o=i*70;return '<g transform="translate('+(40+o)+' '+(150-i*10)+')"><path d="M8 20 C8 -12 48 -12 48 20" fill="none" stroke="#2b2b2b" stroke-width="5"/><rect x="20" y="0" width="16" height="20" rx="6" fill="#2b2b2b"/><rect x="0" y="16" width="56" height="28" rx="9" fill="#2b2b2b"/><rect x="6" y="44" width="44" height="10" rx="4" fill="#555"/></g>';}).join('')+'</g>';}
+function brush(x,y){return '<g transform="translate('+x+' '+y+') rotate(-28 100 150)"><rect x="96" y="40" width="8" height="190" rx="4" fill="#8F4F35"/><rect x="84" y="200" width="32" height="64" rx="10" fill="#2E3A4B"/>'+
+  Array.from({length:9}).map(function(_,i){return '<line x1="'+(86+i*3.5)+'" y1="40" x2="'+(86+i*3.5)+'" y2="100" stroke="#C27D5E" stroke-width="2"/>';}).join('')+
+  '<rect x="150" y="150" width="6" height="110" rx="3" fill="#8F4F35"/><ellipse cx="153" cy="148" rx="10" ry="16" fill="#C27D5E"/></g>';}
+function boot(x,y){return '<g transform="translate('+x+' '+y+')"><rect x="40" y="170" width="70" height="60" rx="20" fill="#2E3A4B"/><rect x="40" y="170" width="70" height="16" fill="#3d4b5f"/><rect x="100" y="185" width="70" height="60" rx="20" fill="#8FA58A"/><rect x="100" y="185" width="70" height="16" fill="#a3b79f"/></g>';}
+function giftbox(x,y){return '<g transform="translate('+x+' '+y+')"><rect x="30" y="150" width="140" height="110" rx="6" fill="#C27D5E"/><rect x="24" y="134" width="152" height="28" rx="5" fill="#A0614A"/><rect x="92" y="134" width="16" height="126" fill="#F1E9DD"/><path d="M100 134 C70 100 60 130 100 134 C140 100 130 130 100 134" fill="none" stroke="#F1E9DD" stroke-width="6"/></g>';}
+function svg(vb,inner,bg){return '<svg viewBox="'+vb+'" xmlns="http://www.w3.org/2000/svg" role="img">'+(bg?'<rect width="100%" height="100%" fill="'+bg+'"/>':'')+inner+'</svg>';}
+function logo(x,y,col,size){size=size||1;return '<g transform="translate('+x+' '+y+') scale('+size+')"><path d="M0 10 q8 -8 16 0 t16 0" fill="none" stroke="'+col+'" stroke-width="3" stroke-linecap="round"/><path d="M0 18 q8 -8 16 0 t16 0" fill="none" stroke="'+col+'" stroke-width="3" stroke-linecap="round" opacity=".6"/><text x="42" y="20" font-family="DM Serif Display,Georgia,serif" font-size="26" fill="'+col+'">Aqualuxe</text></g>';}
+function hills(w,h){return '<path d="M0 '+(h*.62)+' L'+(w*.18)+' '+(h*.38)+' L'+(w*.32)+' '+(h*.55)+' L'+(w*.5)+' '+(h*.3)+' L'+(w*.7)+' '+(h*.56)+' L'+(w*.85)+' '+(h*.42)+' L'+w+' '+(h*.6)+' L'+w+' '+h+' L0 '+h+' Z" fill="#8FA58A" opacity=".55"/>'+
+  '<path d="M0 '+(h*.75)+' Q'+(w*.3)+' '+(h*.62)+' '+(w*.55)+' '+(h*.74)+' T'+w+' '+(h*.7)+' L'+w+' '+h+' L0 '+h+' Z" fill="#6F8769" opacity=".7"/>';}
+function sky(w,h){return '<rect width="'+w+'" height="'+h+'" fill="#F3E6D3"/><circle cx="'+(w*.78)+'" cy="'+(h*.26)+'" r="'+(h*.12)+'" fill="#E9B98F" opacity=".8"/>';}
+// image set for the listing
+function imgMain(c,sz){return svg('0 0 300 300',bottle(c,sz,50,0),'#fff');}
+function imgSizes(c){return svg('0 0 300 300','<g transform="scale(.5)">'+bottle(c,18,-30,240)+bottle(c,24,200,240)+bottle(c,32,430,240)+'</g><g font-family="DM Sans,Arial,sans-serif" font-size="13" font-weight="700" fill="#2E3A4B" text-anchor="middle"><text x="35" y="285">18 oz</text><text x="150" y="285">24 oz</text><text x="265" y="285">32 oz</text></g><text x="150" y="28" text-anchor="middle" font-family="DM Sans,Arial,sans-serif" font-size="14" font-weight="700" fill="#2E3A4B">CHOOSE YOUR SIZE</text>','#fff');}
+function feat(y,t1,t2,ic){return '<g transform="translate(150 '+y+')"><circle cx="18" cy="18" r="18" fill="#F1E9DD"/>'+ic+'<text x="46" y="15" font-family="DM Sans,Arial,sans-serif" font-size="13" font-weight="700" fill="#2E3A4B">'+t1+'</text><text x="46" y="31" font-family="DM Sans,Arial,sans-serif" font-size="11" fill="#5F564D">'+t2+'</text></g>';}
+var icSnow='<g stroke="#2E3A4B" stroke-width="2" stroke-linecap="round"><line x1="18" y1="8" x2="18" y2="28"/><line x1="9" y1="13" x2="27" y2="23"/><line x1="9" y1="23" x2="27" y2="13"/></g>';
+var icDrop='<path d="M18 8 C24 16 26 20 26 23 a8 8 0 0 1 -16 0 C10 20 12 16 18 8z" fill="none" stroke="#2E3A4B" stroke-width="2"/>';
+var icLeaf='<path d="M10 26 C10 12 20 8 28 8 C28 18 22 26 10 26z M10 26 L20 16" fill="none" stroke="#2E3A4B" stroke-width="2"/>';
+function imgInfo(c,sz){return svg('0 0 300 300','<g transform="scale(.9) translate(-40 20)">'+bottle(c,sz,0,0)+'</g>'+feat(55,'24 h cold','Double-wall vacuum',icSnow)+feat(125,'Leak-proof','Click-lock straw lid',icDrop)+feat(195,'BPA-free','18/8 stainless steel',icLeaf),'#fff');}
+function imgLife(c,sz){return svg('0 0 300 300',sky(300,300)+hills(300,300)+'<rect x="0" y="236" width="300" height="64" fill="#BFAA87"/><rect x="0" y="236" width="300" height="6" fill="#A99572"/>'+'<g transform="scale(.72) translate(150 58)">'+bottle(c,sz,0,0)+'</g><rect x="40" y="200" width="70" height="40" rx="6" fill="#49352B" opacity=".85"/><rect x="48" y="190" width="54" height="14" rx="4" fill="#5b4433"/>');}
+var IMG={main:imgMain,sizes:function(c){return imgSizes(c);},info:imgInfo,life:imgLife};
+
+// ---- listing state
+var st={c:'sage',sz:24,img:'main'};
+var $=function(id){return document.getElementById(id);};
+function title(){return 'Aqualuxe Insulated Water Bottle with Straw Lid, '+st.sz+' oz Stainless Steel Leak-Proof Bottle, Keeps Drinks Cold 24 Hours &amp; Hot 12 Hours, BPA-Free, '+C[st.c].n;}
+function renderListing(){
+  $('pdpMain').innerHTML=IMG[st.img](st.c,st.sz);
+  [].forEach.call(document.querySelectorAll('#demo-listing .th'),function(b){b.innerHTML=IMG[b.dataset.img](st.c,st.sz);b.classList.toggle('on',b.dataset.img===st.img);b.setAttribute('aria-selected',b.dataset.img===st.img);});
+  $('pdpTitle').innerHTML=title();
+  $('pdpPrice').innerHTML='<small>$</small>'+S[st.sz].p;
+  $('pdpColorName').textContent=C[st.c].n; $('pdpSizeName').textContent=st.sz+' oz';
+  [].forEach.call(document.querySelectorAll('#pdpColors .sw'),function(b){b.classList.toggle('on',b.dataset.c===st.c);b.setAttribute('aria-pressed',b.dataset.c===st.c);});
+  [].forEach.call(document.querySelectorAll('#pdpSizes .sz'),function(b){b.classList.toggle('on',+b.dataset.s===st.sz);b.setAttribute('aria-pressed',+b.dataset.s===st.sz);});
+  $('pdpId').textContent='Child SKU '+sku(st.sz,st.c)+' · ASIN '+asin(st.sz,st.c)+' · Parent AQL-WB-PARENT';
+  [].forEach.call(document.querySelectorAll('.vcell'),function(b){b.classList.toggle('on',b.dataset.c===st.c&&+b.dataset.s===st.sz);});
+}
+$('pdpColors').innerHTML=ORDER.map(function(c){return '<button class="sw" type="button" data-c="'+c+'" style="background:'+C[c].b+'" aria-label="'+C[c].n+'" title="'+C[c].n+'"></button>';}).join('');
+$('pdpSizes').innerHTML=SIZES.map(function(s){return '<button class="sz" type="button" data-s="'+s+'">'+s+' oz<br><small>$'+S[s].p+'</small></button>';}).join('');
+document.getElementById('demo-listing').addEventListener('click',function(e){
+  var b=e.target.closest('button'); if(!b) return;
+  if(b.dataset.c){st.c=b.dataset.c;} else if(b.dataset.s){st.sz=+b.dataset.s;} else if(b.dataset.img){st.img=b.dataset.img;} else return;
+  renderListing();
+});
+
+// ---- variations
+var m='<div></div>'+ORDER.map(function(c){return '<div class="h"><i style="background:'+C[c].b+'"></i>'+C[c].n+'</div>';}).join('');
+SIZES.forEach(function(s){m+='<div class="h">'+s+' oz</div>'+ORDER.map(function(c){return '<button class="vcell" type="button" data-c="'+c+'" data-s="'+s+'"><b>'+s+' oz · '+C[c].n+'</b>'+sku(s,c)+'<br>'+asin(s,c)+'</button>';}).join('');});
+$('vMatrix').innerHTML=m;
+var colorMap={sage:'Green',clay:'Orange',midnight:'Blue',sand:'Beige'};
+var rows='<tr class="par"><td>AQL-WB-PARENT</td><td>BOTTLE</td><td>Create or Replace (Full Update)</td><td class="p">Parent</td><td></td><td class="c">SizeName-ColorName</td><td></td><td></td><td></td><td>B0DEMO0000</td><td></td></tr>';
+SIZES.forEach(function(s){ORDER.forEach(function(c){rows+='<tr><td>'+sku(s,c)+'</td><td>BOTTLE</td><td>Edit (Partial Update)</td><td class="p">Child</td><td>AQL-WB-PARENT</td><td class="c">SizeName-ColorName</td><td>'+s+' Fl Oz</td><td>'+C[c].n+'</td><td>'+colorMap[c]+'</td><td>'+asin(s,c)+'</td><td>$'+S[s].p+'</td></tr>';});});
+$('vRows').innerHTML=rows;
+$('vMatrix').addEventListener('click',function(e){var b=e.target.closest('.vcell');if(!b)return;st.c=b.dataset.c;st.sz=+b.dataset.s;st.img='main';renderListing();var t=document.getElementById('demo-listing');if(t&&t.scrollIntoView){t.scrollIntoView({behavior:'smooth',block:'start'});}});
+
+// ---- brand story + A+
+$('bsHero').innerHTML=svg('0 0 400 300',sky(400,300)+hills(400,300)+'<g transform="scale(.5) translate(380 280)">'+bottle('clay',24,0,0)+bottle('sage',32,95,0)+bottle('midnight',18,190,0)+'</g>'+logo(26,34,'#2E3A4B',1.15)+'<text x="28" y="92" font-family="DM Sans,Arial,sans-serif" font-size="13" fill="#2E3A4B">Made for the long day.</text>');
+$('bsImg').innerHTML=svg('0 0 250 300','<rect width="250" height="300" fill="#C27D5E"/><circle cx="125" cy="300" r="170" fill="#A0614A"/><g transform="scale(.9) translate(38 40)">'+bottle('sand',24,0,0)+'</g><text x="20" y="34" font-family="DM Serif Display,Georgia,serif" font-size="22" fill="#fff">Built to last</text>');
+$('bsAsins').innerHTML=[['sage',18,'18 oz Bottle'],['clay',24,'24 oz Bottle'],['midnight',32,'32 oz Bottle']].map(function(p){return '<div class="mini">'+svg('0 -50 200 350',bottle(p[0],p[1],0,0),'#F7F3EC')+'<span>'+p[2]+'</span></div>';}).join('');
+$('apBanner').innerHTML=svg('0 0 970 300','<rect width="970" height="300" fill="#2E3A4B"/><circle cx="800" cy="330" r="260" fill="#3c4a5e"/><g transform="scale(.82) translate(800 70)">'+bottle('sand',24,0,0)+bottle('clay',32,120,0)+bottle('sage',18,240,0)+'</g>'+logo(56,60,'#F1E9DD',1)+'<text x="56" y="150" font-family="DM Serif Display,Georgia,serif" font-size="44" fill="#fff">Cold for 24 hours.</text><text x="56" y="200" font-family="DM Serif Display,Georgia,serif" font-size="44" fill="#E9B98F">Hot for 12.</text><text x="58" y="240" font-family="DM Sans,Arial,sans-serif" font-size="16" fill="#F1E9DD">Double-wall stainless steel in three sizes and four colors.</text>');
+function icPanel(inner,bg){return svg('0 0 300 220',inner,bg);}
+$('apIc1').innerHTML=icPanel('<g transform="translate(70 0) scale(.75)">'+bottle('midnight',24,0,0)+'</g><g transform="translate(40 40)" stroke="#2E3A4B" stroke-width="5" stroke-linecap="round"><line x1="0" y1="0" x2="0" y2="60"/><line x1="-26" y1="15" x2="26" y2="45"/><line x1="-26" y1="45" x2="26" y2="15"/></g><g transform="translate(250 70)" stroke="#C27D5E" stroke-width="5" fill="none" stroke-linecap="round"><path d="M0 0 q10 -15 0 -30"/><path d="M14 0 q10 -15 0 -30"/></g>','#F1E9DD');
+$('apIc2').innerHTML=icPanel('<g transform="translate(40 -30) scale(1.4)">'+'<path d="M80 50 C80 18 120 18 120 50" fill="none" stroke="#2b2b2b" stroke-width="6"/><rect x="92" y="28" width="16" height="22" rx="6" fill="#2b2b2b"/><rect x="72" y="44" width="56" height="26" rx="9" fill="#2b2b2b"/><rect x="76" y="66" width="48" height="30" rx="10" fill="#A0614A"/><rect x="58" y="88" width="84" height="80" rx="20" fill="#C27D5E"/></g><g transform="translate(230 50)"><circle r="22" fill="#8FA58A"/><path d="M-9 0 l6 7 l12 -14" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/></g>','#F7F3EC');
+$('apIc3').innerHTML=icPanel('<g transform="scale(.62) translate(10 60)">'+bottle('sage',18,0,0)+bottle('clay',24,110,0)+bottle('midnight',32,220,0)+bottle('sand',24,330,0)+'</g>','#F1E9DD');
+$('apLife').innerHTML=svg('0 0 400 300',sky(400,300)+hills(400,300)+'<rect x="0" y="240" width="400" height="60" fill="#BFAA87"/><g transform="translate(150 70) scale(.62)"><rect x="0" y="120" width="160" height="110" rx="14" fill="#49352B"/><rect x="18" y="96" width="124" height="32" rx="10" fill="#5b4433"/><rect x="60" y="150" width="40" height="40" rx="6" fill="#C27D5E"/></g><g transform="scale(.7) translate(330 105)">'+bottle('midnight',32,0,0)+'</g>');
+$('apIc4').innerHTML=icPanel('<g transform="translate(20 0) scale(.75)">'+bottle('sage',24,0,0)+'</g><g transform="translate(150 -40) scale(.95)">'+brush(0,0)+'</g>','#F7F3EC');
+(function(){var nav=document.querySelector('.navc');if(!nav)return;var tabs=[].slice.call(nav.querySelectorAll('.navc-tabs button')),ps=[].slice.call(nav.querySelectorAll('.navc-p')),ds=[].slice.call(nav.querySelectorAll('.navc-dots i'));
+nav.querySelector('.navc-tabs').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var t=+b.dataset.t;tabs.forEach(function(x,i){x.classList.toggle('on',i===t);x.setAttribute('aria-selected',i===t);});ps.forEach(function(x,i){x.classList.toggle('on',i===t);});ds.forEach(function(x,i){x.classList.toggle('on',i===t);});});})();
+[18,24,32].forEach(function(s){$('cmp'+s).innerHTML=svg('0 -50 200 350',bottle('sage',s,0,0));});
+
+// ---- brand store
+$('stHead').innerHTML=svg('0 0 1200 260','<rect width="1200" height="260" fill="#F1E9DD"/>'+hills(1200,260)+'<rect x="0" y="0" width="560" height="260" fill="#F1E9DD" opacity=".75"/>'+logo(60,90,'#2E3A4B',2)+'<text x="64" y="190" font-family="DM Sans,Arial,sans-serif" font-size="22" fill="#2E3A4B">Insulated bottles and tumblers for long days.</text><g transform="scale(.8) translate(980 60)">'+bottle('clay',24,0,0)+bottle('sage',32,130,0)+bottle('midnight',24,260,0)+'</g>');
+var P={
+ bottles:[['b','sage',18,'Insulated Water Bottle, 18 oz','24.99'],['b','clay',24,'Insulated Water Bottle, 24 oz','27.99'],['b','midnight',32,'Insulated Water Bottle, 32 oz','31.99'],['b','sand',24,'Insulated Water Bottle, 24 oz, Sand','27.99']],
+ tumblers:[['t','sage',0,'Insulated Tumbler with Handle, 30 oz','29.99'],['t','midnight',0,'Insulated Tumbler with Handle, 40 oz','34.99'],['t','clay',0,'Insulated Tumbler with Handle, 30 oz, Clay','29.99']],
+ accessories:[['l','',0,'Replacement Straw Lid, 2-Pack','12.99'],['r','',0,'Bottle Brush Cleaning Set, 3 Pieces','9.99'],['o','',0,'Silicone Bottle Boot, 2-Pack','8.99']],
+ gifts:[['g','',0,'Bottle + Tumbler Gift Set','54.99'],['g2','',0,'Family 3-Bottle Gift Set','74.99']]
+};
+function pimg(p){var t=p[0];var inner=t==='b'?bottle(p[1],p[2],0,0):t==='t'?tumbler(p[1],0,0,1):t==='l'?lids(0,0):t==='r'?brush(0,0):t==='o'?boot(0,0):t==='g'?giftbox(0,0)+'<g transform="scale(.6) translate(150 10)">'+bottle('sage',24,0,0)+'</g>':'<g transform="scale(.55) translate(10 200)">'+bottle('clay',18,0,0)+bottle('sage',24,110,0)+bottle('midnight',32,220,0)+'</g>';return svg('0 -50 200 350',inner);}
+function card(p){return '<div class="st-card"><div class="im">'+pimg(p)+'</div><div class="tx"><span>Aqualuxe '+p[3]+'</span><b>$'+p[4]+'</b></div></div>';}
+var BANDS={bottles:['Water Bottles','Three sizes, four colors, one leak-proof straw lid.'],tumblers:['Tumblers','A handle, a straw and room for ice.'],accessories:['Accessories','Spare lids, boots and brushes to keep bottles in use longer.'],gifts:['Gift Sets','Ready-to-gift bundles for birthdays and the holidays.']};
+function page(name){
+  var h='';
+  if(name==='home'){
+    h+='<div class="st-hero"><div class="t"><b>New colors: Clay and Sand</b><p>Our best-selling straw-lid bottle, now in two warm shades.</p><button type="button" data-go="bottles">Shop water bottles</button></div><div class="i">'+svg('0 0 400 260','<rect width="400" height="260" fill="#C27D5E"/><circle cx="200" cy="300" r="190" fill="#A0614A"/><g transform="scale(.75) translate(110 70)">'+bottle('clay',24,0,0)+bottle('sand',24,150,0)+'</g>')+'</div></div>';
+    h+='<div class="st-sec"><h6>Shop by size</h6><div class="st-tiles">'+[[18,'18 oz · Commute'],[24,'24 oz · Office &amp; gym'],[32,'32 oz · Long shifts']].map(function(s){return '<button class="st-tile" type="button" data-go="bottles">'+svg('0 0 300 150','<rect width="300" height="150" fill="#F1E9DD"/><g transform="translate(105 8) scale(.45)">'+bottle('sage',s[0],0,0)+'</g>')+'<span>'+s[1]+'</span></button>';}).join('')+'</div></div>';
+    h+='<div class="st-sec"><h6>Best sellers</h6><div class="st-grid">'+[P.bottles[1],P.tumblers[0],P.bottles[2],P.accessories[0]].map(card).join('')+'</div></div>';
+    h+='<div class="st-sec"><h6>Shop by color</h6><div class="st-colors">'+ORDER.map(function(c){return '<button class="st-color" type="button" data-go="bottles" style="background:'+C[c].b+';color:'+C[c].t+'">'+C[c].n+'</button>';}).join('')+'</div></div>';
+  } else {
+    h+='<div class="st-band"><b>'+BANDS[name][0]+'</b><p>'+BANDS[name][1]+'</p></div><div class="st-grid">'+P[name].map(card).join('')+'</div>';
+  }
+  $('stPage').innerHTML=h;
+  [].forEach.call(document.querySelectorAll('.st-nav button'),function(b){b.classList.toggle('on',b.dataset.page===name);b.setAttribute('aria-current',b.dataset.page===name?'page':'false');});
+}
+document.querySelector('.store').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var go=b.dataset.page||b.dataset.go;if(go)page(go);});
+page('home');
+renderListing();
+})();
+
+// ---------- demo dashboards (fictional sample data) ----------
+(function(){
+var BLUE='#3A6EA5',TERRA='#D06A3A',CH=[];
+var $=function(id){return document.getElementById(id);};
+var seed=7;function rnd(){seed=(seed*16807)%2147483647;return (seed-1)/2147483646;}
+function axm(v){return v>=1e6?'$'+(v/1e6)+'M':v>=1e3?'$'+(v/1e3)+'K':'$'+v;}
+function money(v,dp){return '$'+(v>=1e6?(v/1e6).toFixed(2)+'M':v>=1e4?(v/1e3).toFixed(dp==null?0:dp)+'K':v.toLocaleString('en-US',{maximumFractionDigits:0}));}
+function pct(v,dp){return v.toFixed(dp==null?1:dp)+'%';}
+function nice(max){var r=max/4,p=Math.pow(10,Math.floor(Math.log10(r)));var n=[1,2,2.5,5,10].map(function(m){return m*p;}).find(function(x){return x>=r;});return n*4;}
+// chart(el,{type,labels,series:[{name,color,values}],fmt,target,min,max,ticks})
+function chart(el,o){
+  el._o=o;CH.push(el);var W=Math.max(320,Math.round(el.clientWidth||640)),H=o.h||240,ml=56,mr=14,mt=14,mb=28,pw=W-ml-mr,ph=H-mt-mb,n=o.labels.length;
+  var all=[].concat.apply([],o.series.map(function(s){return s.values;}));if(o.target)all.push(o.target.value);
+  var lo=o.min!=null?o.min:0,hi=o.max!=null?o.max:nice(Math.max.apply(null,all)*1.05);
+  var y=function(v){return mt+ph-(v-lo)/(hi-lo)*ph;};
+  var band=pw/n,x=function(i){return ml+band*i+band/2;};
+  var s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+o.aria+'">';
+  for(var t=0;t<=4;t++){var v=lo+(hi-lo)*t/4,yy=y(v);s+='<line class="'+(t?'grid':'base')+'" x1="'+ml+'" x2="'+(W-mr)+'" y1="'+yy+'" y2="'+yy+'"/><text class="ax" x="'+(ml-8)+'" y="'+(yy+4)+'" text-anchor="end">'+o.fmt(v,true)+'</text>';}
+  var every=Math.ceil(n/Math.min(o.maxLabels||8,Math.max(3,Math.floor(pw/58))));
+  o.labels.forEach(function(l,i){if(i%every===0||(i===n-1&&n<=12&&(n-1)%every>=Math.ceil(every/2)))s+='<text class="ax" x="'+x(i)+'" y="'+(H-8)+'" text-anchor="middle">'+l+'</text>';});
+  if(o.type==='bar'){
+    var ns=o.series.length,bw=Math.min(28,(band-6)/ns);
+    o.series.forEach(function(se,k){se.values.forEach(function(v,i){var bx=x(i)-ns*bw/2+k*bw+1,by=y(v),bh=y(lo)-by,w=bw-2,r=Math.min(4,w/2,bh);
+      s+='<path class="bar" data-i="'+i+'" fill="'+se.color+'" d="M'+bx+' '+(by+bh)+'V'+(by+r)+'Q'+bx+' '+by+' '+(bx+r)+' '+by+'H'+(bx+w-r)+'Q'+(bx+w)+' '+by+' '+(bx+w)+' '+(by+r)+'V'+(by+bh)+'Z"/>';});});
+  }
+  if(o.target){var ty=y(o.target.value);s+='<line class="tgt" x1="'+ml+'" x2="'+(W-mr)+'" y1="'+ty+'" y2="'+ty+'"/><text class="tgt-l" x="'+(W-mr)+'" y="'+(ty-6)+'" text-anchor="end">'+o.target.label+'</text>';}
+  if(o.type==='line'){
+    o.series.forEach(function(se){var d=se.values.map(function(v,i){return (i?'L':'M')+x(i).toFixed(1)+' '+y(v).toFixed(1);}).join('');
+      s+='<path d="'+d+'" fill="none" stroke="'+se.color+'" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>';
+      var li=se.values.length-1;s+='<circle cx="'+x(li)+'" cy="'+y(se.values[li])+'" r="4" fill="'+se.color+'" stroke="#fff" stroke-width="2"/>';});
+    s+='<g class="dots"></g>';
+  }
+  s+='<line class="xh" x1="0" x2="0" y1="'+mt+'" y2="'+(mt+ph)+'"/>';
+  for(var i=0;i<n;i++)s+='<rect class="hit" data-i="'+i+'" x="'+(ml+band*i)+'" y="'+mt+'" width="'+band+'" height="'+ph+'"/>';
+  s+='</svg><div class="tip" role="status"></div>';
+  el.innerHTML=s;
+  var svg=el.querySelector('svg'),tip=el.querySelector('.tip'),xh=el.querySelector('.xh'),dots=el.querySelector('.dots');
+  function show(i){
+    var h='<b>'+(o.tipLabels||o.labels)[i]+'</b>'+o.series.map(function(se){return '<div><i style="background:'+se.color+'"></i>'+se.name+': '+o.fmt(se.values[i])+'</div>';}).join('')+(o.extra?o.extra(i):'');
+    tip.innerHTML=h;tip.classList.add('show');el.classList.add('hovering');
+    var r=svg.getBoundingClientRect(),sc=r.width/W,top=Math.min.apply(null,o.series.map(function(se){return y(se.values[i]);}));
+    var px=x(i)*sc;px=Math.max(70,Math.min(r.width-70,px));tip.style.left=px+'px';tip.style.top=(top*sc-10)+'px';
+    if(o.type==='line'){xh.setAttribute('x1',x(i));xh.setAttribute('x2',x(i));xh.style.opacity=1;
+      dots.innerHTML=o.series.map(function(se){return '<circle cx="'+x(i)+'" cy="'+y(se.values[i])+'" r="5" fill="'+se.color+'" stroke="#fff" stroke-width="2"/>';}).join('');}
+    [].forEach.call(el.querySelectorAll('.bar'),function(b){b.classList.toggle('on',+b.dataset.i===i);});
+  }
+  function hide(){tip.classList.remove('show');el.classList.remove('hovering');xh.style.opacity=0;if(dots)dots.innerHTML='';}
+  svg.addEventListener('mousemove',function(e){var r=e.target.closest('[data-i]');if(r)show(+r.dataset.i);});
+  svg.addEventListener('mouseleave',hide);
+  svg.addEventListener('touchstart',function(e){var r=e.target.closest('[data-i]');if(r)show(+r.dataset.i);},{passive:true});
+}
+function legend(el,items){el.innerHTML=items.map(function(it){return '<span><i style="background:'+it[1]+'"></i>'+it[0]+'</span>';}).join('');}
+function kpis(el,items){el.innerHTML=items.map(function(k){return '<div class="kpi"><span class="k">'+k[0]+'</span><span class="v">'+k[1]+'</span><span class="d">'+k[2]+'</span></div>';}).join('');}
+
+// ---- PPC (October, 31 days)
+var days=[],sales=[],spend=[],acos=[];
+for(var d=1;d<=31;d++){var wk=[0,6].indexOf(new Date(2026,9,d).getDay())>=0;var base=5200+d*55+(wk?900:0)+(d>=24&&d<=27?1500:0);
+  var sl=Math.round(base*(0.9+rnd()*0.2)),a=19.2+rnd()*1.7-(d>20?0.4:0);sales.push(sl);spend.push(Math.round(sl*a/100));acos.push(+(spend[d-1]/sl*100).toFixed(1));days.push('Oct '+d);}
+var tS=sales.reduce(function(a,b){return a+b;}),tP=spend.reduce(function(a,b){return a+b;});
+kpis($('ppcKpis'),[['Ad sales',money(tS,1),'<b>+9.4%</b> vs September'],['Ad spend',money(tP,1),'avg '+money(Math.round(tP/31))+' per day'],['ACoS',pct(tP/tS*100),'target 21.0%'],['ROAS',(tS/tP).toFixed(2)+'×','return per $1 of spend']]);
+legend($('ppcLg'),[['Ad sales',BLUE],['Ad spend',TERRA]]);
+chart($('chPpc'),{type:'line',labels:days.map(function(l,i){return i%5===0?l:l.replace('Oct ','');}),tipLabels:days,maxLabels:7,series:[{name:'Ad sales',color:BLUE,values:sales},{name:'Ad spend',color:TERRA,values:spend}],fmt:function(v,ax){return ax?axm(v):'$'+Math.round(v).toLocaleString('en-US');},aria:'Daily ad sales and ad spend for October',extra:function(i){return '<div>ACoS: '+acos[i]+'%</div>';}});
+chart($('chAcos'),{type:'line',labels:days.map(function(l,i){return i%5===0?l:l.replace('Oct ','');}),tipLabels:days,maxLabels:7,series:[{name:'ACoS',color:BLUE,values:acos}],min:12,max:24,target:{value:21,label:'Target 21%'},fmt:function(v){return v.toFixed(v%1?1:0)+'%';},aria:'Daily ACoS for October against a 21 percent target'});
+var TYPES=[['SP','Sponsored Products','Product ads in search and on detail pages',0.62,1.0],['SB Video','Sponsored Brands · Video','Autoplay video in search results',0.22,0.93],['SB Banner','Sponsored Brands · Headline banner','Logo, headline and 3 products at the top of search',0.16,1.06]];
+var TGT=[['Exact','Top converting search terms',0.24,15.8],['Phrase','Close variants of core terms',0.16,19.6],['Broad','Discovery for new search terms',0.12,23.4],['Categories','Category targeting',0.10,22.1],['Auto','Amazon-matched targeting',0.14,25.2],['Competitors','Competitor ASINs and brands',0.12,24.0],['Keywords','Brand and product-name keywords',0.12,17.9]];
+var rowsP=[];TYPES.forEach(function(ty){TGT.forEach(function(tg){var sp=tP*ty[3]*tg[2];rowsP.push({ty:ty[0],t:tg[0],d:tg[1],sp:sp,raw:sp/(tg[3]*ty[4]/100)});});});
+var fct=tS/rowsP.reduce(function(a,r){return a+r.raw;},0);rowsP.forEach(function(r){r.sa=r.raw*fct;r.ac=r.sp/r.sa*100;});
+function act(ac){return ac<18?['good','✓ Scale']:ac<21?['info','○ Hold']:ac<24?['warn','! Optimize']:['warn','! Cut bids'];}
+function fm(v){return '$'+Math.round(v).toLocaleString('en-US');}
+$('ppcStruct').innerHTML=TYPES.map(function(ty){return '<div class="cs"><div class="cs-h"><b>'+ty[0]+' Campaign</b><span>'+ty[1]+'</span></div><p>'+ty[2]+'</p><ul>'+TGT.map(function(tg){return '<li>'+(ty[0]!=='SP'&&tg[0]==='Auto'?'Auto (theme)':tg[0])+'</li>';}).join('')+'</ul><div class="cs-f">'+Math.round(ty[3]*100)+'% of spend</div></div>';}).join('');
+var th='<thead><tr><th>Campaign / targeting</th><th>Spend</th><th>Sales</th><th>ACoS</th><th>ROAS</th><th>Action</th></tr></thead><tbody>';
+TYPES.forEach(function(ty){var rs=rowsP.filter(function(r){return r.ty===ty[0];});var sp=rs.reduce(function(a,r){return a+r.sp;},0),sa=rs.reduce(function(a,r){return a+r.sa;},0);
+ th+='<tr class="grp"><td class="c"><b>AQL | '+ty[0]+'</b><span>'+ty[1]+' · 7 campaigns</span></td><td>'+fm(sp)+'</td><td>'+fm(sa)+'</td><td>'+(sp/sa*100).toFixed(1)+'%</td><td>'+(sa/sp).toFixed(2)+'×</td><td></td></tr>';
+ rs.forEach(function(r){var a=act(r.ac);var nm=(r.ty!=='SP'&&r.t==='Auto')?'Auto (theme)':r.t;th+='<tr><td class="c sub"><b>AQL | '+r.ty+' | '+nm+'</b><span>'+r.d+'</span></td><td>'+fm(r.sp)+'</td><td>'+fm(r.sa)+'</td><td>'+r.ac.toFixed(1)+'%</td><td>'+(r.sa/r.sp).toFixed(2)+'×</td><td><span class="pill '+a[0]+'">'+a[1]+'</span></td></tr>';});});
+$('ppcTable').innerHTML=th+'<tr class="tot"><td class="c"><b>Total</b><span>21 campaigns</span></td><td>'+fm(tP)+'</td><td>'+fm(tS)+'</td><td>'+(tP/tS*100).toFixed(1)+'%</td><td>'+(tS/tP).toFixed(2)+'×</td><td></td></tr></tbody>';
+
+// ---- TACoS (12 months)
+var months=['Nov','Dec','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct'],monthsY=['Nov 2025','Dec 2025','Jan 2026','Feb 2026','Mar 2026','Apr 2026','May 2026','Jun 2026','Jul 2026','Aug 2026','Sep 2026','Oct 2026'];
+var total=[688,742,598,571,634,662,676,701,758,712,684,731].map(function(v){return v*1000;});
+var tacos=[16.8,17.4,15.9,15.2,15.6,15.1,14.8,15.3,17.6,15.7,15.0,14.6];
+kpis($('tacosKpis'),[['Total sales, 12 mo',money(total.reduce(function(a,b){return a+b;})),'avg '+money(total.reduce(function(a,b){return a+b;})/12)+' per month'],['TACoS, 12 mo',pct(tacos.reduce(function(a,b){return a+b;})/12),'target 18.0%'],['Best month','Jul 2026','$758K, Prime Day'],['Months over target','0 of 12','highest: Jul at 17.6%']]);
+chart($('chTotal'),{type:'bar',labels:months,tipLabels:monthsY,series:[{name:'Total sales',color:BLUE,values:total}],fmt:function(v,ax){return ax?axm(v):'$'+Math.round(v).toLocaleString('en-US');},aria:'Monthly total sales, November 2025 to October 2026',extra:function(i){return '<div>TACoS: '+tacos[i]+'%</div>';}});
+chart($('chTacos'),{type:'line',labels:months,tipLabels:monthsY,series:[{name:'TACoS',color:BLUE,values:tacos}],min:10,max:22,target:{value:18,label:'Target 18%'},fmt:function(v){return v.toFixed(v%1?1:0)+'%';},aria:'Monthly TACoS against an 18 percent target'});
+
+// ---- Business report (Jan-Oct, YoY)
+var m10=months.slice(2),m10Y=monthsY.slice(2);
+var ty=[598,571,634,662,676,701,758,712,684,731].map(function(v){return v*1000;});
+var ly=[541,528,566,590,612,633,689,655,640,662].map(function(v){return v*1000;});
+var sess=[96,92,101,104,106,109,118,111,107,113].map(function(v){return v*1000;});
+var conv=[12.4,12.3,12.7,12.9,12.8,13.0,13.5,13.1,12.9,13.4];
+var tyT=ty.reduce(function(a,b){return a+b;}),lyT=ly.reduce(function(a,b){return a+b;});
+kpis($('repKpis'),[['Ordered sales, YTD',money(tyT),'<b>+'+((tyT/lyT-1)*100).toFixed(1)+'%</b> vs last year'],['Sessions, YTD',(sess.reduce(function(a,b){return a+b;})/1e6).toFixed(2)+'M','avg '+Math.round(sess.reduce(function(a,b){return a+b;})/10/1000)+'K per month'],['Conversion rate','12.9%','unit session %'],['Avg selling price','$27.84','1.31 units per order']]);
+legend($('yoyLg'),[['2026',BLUE],['2025',TERRA]]);
+chart($('chYoy'),{type:'line',h:220,labels:m10,tipLabels:m10Y.map(function(l){return l.replace(' 2026','');}),series:[{name:'2026',color:BLUE,values:ty},{name:'2025',color:TERRA,values:ly}],fmt:function(v,ax){return ax?axm(v):'$'+Math.round(v).toLocaleString('en-US');},aria:'Ordered product sales by month, 2026 versus 2025',extra:function(i){return '<div>Change: +'+((ty[i]/ly[i]-1)*100).toFixed(1)+'%</div>';}});
+chart($('chSess'),{type:'bar',labels:m10,tipLabels:m10Y,series:[{name:'Sessions',color:BLUE,values:sess}],fmt:function(v,ax){return ax?Math.round(v/1000)+'K':Math.round(v).toLocaleString('en-US');},aria:'Monthly sessions, January to October 2026'});
+chart($('chConv'),{type:'line',labels:m10,tipLabels:m10Y,series:[{name:'Conversion',color:BLUE,values:conv}],min:10,max:14,fmt:function(v){return v.toFixed(1)+'%';},aria:'Monthly unit session percentage, January to October 2026'});
+
+// ---- Account health
+$('issues').innerHTML=['Intellectual property complaints','Product authenticity complaints','Product safety issues','Listing policy violations','Restricted product violations','Customer review policy violations'].map(function(t){return '<li><span>'+t+'</span><b>0</b></li>';}).join('');
+var mets=[['Order defect rate','Target under 1%',0.18,1,'0.18%',true],['Late shipment rate','Target under 4%',0.9,4,'0.9%',true],['Pre-fulfillment cancel rate','Target under 2.5%',0.3,2.5,'0.3%',true],['Valid tracking rate','Target over 95%',99.4,95,'99.4%',false],['On-time delivery rate','Target over 90%',97.8,90,'97.8%',false]];
+$('mets').innerHTML=mets.map(function(m){var under=m[5];var scale=under?m[3]*2:100;var w=Math.min(100,m[2]/scale*100),tp=m[3]/scale*100;return '<div class="met"><div><div class="n">'+m[0]+'</div><div class="t">'+m[1]+'</div></div><div><span class="v">'+m[4]+'</span> <span class="pill good">✓ Meets</span></div><div class="track" aria-hidden="true"><i style="width:'+w+'%"></i><b style="left:'+tp+'%"></b></div></div>';}).join('');
+var wks=[],odr=[];for(var k=12;k>=1;k--){wks.push(k===1?'This wk':'-'+(k-1)+'w');}
+odr=[0.31,0.28,0.26,0.29,0.24,0.22,0.25,0.21,0.19,0.2,0.17,0.18];
+var _rt;window.addEventListener('resize',function(){clearTimeout(_rt);_rt=setTimeout(function(){var list=CH.slice();CH.length=0;list.forEach(function(el){chart(el,el._o);});},150);});
+chart($('chOdr'),{type:'line',h:200,labels:wks,tipLabels:wks.map(function(w){return w==='This wk'?'This week':w.replace('-','').replace('w',' weeks ago');}),series:[{name:'Order defect rate',color:BLUE,values:odr}],min:0,max:1.2,target:{value:1,label:'Target under 1%'},fmt:function(v){return v.toFixed(2)+'%';},aria:'Weekly order defect rate over 12 weeks against a 1 percent target'});
+})();
+
 </script>
 </body>
 </html>
