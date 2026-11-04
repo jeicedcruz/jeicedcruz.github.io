@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jaysone Dela Cruz Portfolio</title>
+<meta name="description" content="Jaysone (Jei) Dela Cruz, Amazon & e-commerce operations specialist with 10+ years of remote experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: Modern Earthy Luxury. Ivory page with sand cards, espresso nav, headings and contact band; terracotta for actions and sage for achievements. */
+:root{
+  --bg:#F7F3EC;          /* warm ivory */
+  --surface:#E8DCCB;     /* sand beige cards */
+  --card-soft:#F1E9DD;   /* lighter sand for inner fills */
+  --heading:#49352B;     /* espresso brown */
+  --ink:#2E2B28;         /* dark charcoal body */
+  --muted:#5F564D;
+  --line:#E2D6C3;        /* light beige dividers */
+  --cta:#B76E50;         /* muted terracotta */
+  --cta-ink:#8F4F35;     /* terracotta for links/text */
+  --taupe:#B99B7B;       /* skill labels */
+  --sage:#78816A;        /* achievements */
+  --accent:var(--cta-ink);
+  --mark:var(--sage);
+  --display:"DM Serif Display", "Playfair Display", Georgia, serif;
+  --body:"DM Sans", "Lato", "Segoe UI", system-ui, sans-serif;
+  --mono:"DM Sans", "Segoe UI", system-ui, sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--body)}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--cta);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);font-weight:400;color:var(--heading);text-wrap:balance;margin:0;line-height:1.15}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+@media (max-width:420px){.wrap{padding:0 16px}}
+
+/* top bar */
+.nav{position:sticky;top:0;z-index:5;background:var(--heading);border-bottom:1px solid #3a2a22}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:56px}
+.brand{font-family:var(--display);font-size:20px;color:#F7F3EC;text-decoration:none}
+.nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;font-size:14px}
+.nav ul a{color:#E8DCCB;text-decoration:none}
+.nav ul a:hover{color:#fff}
+@media (max-width:640px){.nav ul{display:none}}
+
+/* hero */
+.hero{padding:56px 0 44px;display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:48px;align-items:center}
+.hero-text{display:grid;gap:24px}
+.portrait{margin:0;position:relative}
+.portrait::before{content:"";position:absolute;inset:18px -18px -18px 18px;border-radius:20px;background:var(--surface)}
+.portrait img{position:relative;display:block;width:100%;height:auto;border-radius:20px;border:1px solid var(--line);box-shadow:0 18px 40px -24px rgba(73,53,43,.45)}
+@media (max-width:820px){.hero{grid-template-columns:1fr;gap:32px}.portrait{max-width:260px;order:-1}}
+.tag{font:600 12.5px/1.3 var(--mono);letter-spacing:.08em;color:var(--sage);text-transform:uppercase}
+.hero h1{font-size:clamp(42px,7vw,76px);letter-spacing:-.01em}
+.hero h1 span{color:var(--taupe)}
+.hero p.lede{max-width:62ch;font-size:19px;color:var(--muted);margin:0}
+.hero p.lede strong{color:var(--ink);font-weight:600;background:linear-gradient(transparent 62%,color-mix(in srgb,var(--taupe) 40%,transparent) 62%)}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font:600 15px/1 var(--body);text-decoration:none;border:1px solid var(--heading);color:var(--heading);background:transparent;cursor:pointer}
+.btn.primary{background:var(--cta);border-color:var(--cta);color:#fff}
+.btn:hover{border-color:var(--cta);color:var(--cta)}
+.btn.primary:hover{background:var(--cta-ink);border-color:var(--cta-ink);color:#fff}
+
+/* metrics */
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:72px}
+@media (max-width:980px){.metrics{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:440px){.metrics{grid-template-columns:1fr}}
+.metric{background:var(--card-soft);padding:22px 22px 20px;display:grid;gap:6px;align-content:start}
+.metric .k{font:500 12px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.metric .v{font:700 32px/1.05 var(--body);color:var(--heading);font-variant-numeric:tabular-nums}
+.metric.feature{background:var(--heading)}
+.metric.feature .k,.metric.feature .n{color:#E8DCCB}
+.metric.feature .v{color:#F7F3EC}
+.metric .n{font-size:14px;color:var(--muted)}
+.bar{height:6px;border-radius:3px;background:var(--surface);position:relative;margin-top:6px}
+.bar i{position:absolute;inset:0 auto 0 0;border-radius:3px;background:var(--sage)}
+.bar b{position:absolute;top:-4px;width:2px;height:14px;background:var(--cta)}
+
+/* sections */
+section{padding:8px 0 72px}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:28px;border-bottom:1px solid var(--line);padding-bottom:12px}
+.sec-head h2{font-size:34px}
+.sec-head .tag{color:var(--muted)}
+
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:40px}
+.about p{margin:0 0 14px;max-width:62ch}
+.facts{list-style:none;margin:0;padding:22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;display:grid;gap:14px;align-content:start}
+.facts li{display:grid;gap:2px}
+.facts .k{font:500 12px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+@media (max-width:760px){.about{grid-template-columns:1fr}}
+
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px}
+.skill{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;display:grid;gap:12px;align-content:start}
+.skill h3{font:600 17px/1.3 var(--body);color:var(--heading)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0}
+.chips li{font-size:13.5px;padding:5px 11px;border-radius:999px;border:1px solid var(--taupe);background:color-mix(in srgb,var(--taupe) 22%,var(--bg));color:var(--heading)}
+
+/* timeline */
+.log{display:grid;gap:0}
+.role{display:grid;grid-template-columns:170px 1fr;gap:28px;padding:28px 0;border-top:1px solid var(--line)}
+.role:first-child{border-top:0;padding-top:0}
+.when{font:500 13px/1.5 var(--mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.when .cur{display:none;display:inline-block;margin-top:6px;padding:2px 8px;border-radius:4px;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent)}
+.role h3{font-size:24px}
+.role .org{font-weight:600;color:var(--cta-ink);margin:4px 0 2px}
+.role .ctx{color:var(--muted);font-size:14.5px;margin:0 0 14px}
+.role ul{margin:0;padding-left:18px;display:grid;gap:8px;max-width:70ch}
+.role ul li::marker{color:var(--mark)}
+.hl{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.hl span{font:600 12.5px/1 var(--body);padding:7px 11px;border-radius:999px;background:var(--sage);color:#fff}
+@media (max-width:700px){.role{grid-template-columns:1fr;gap:8px}}
+
+.earlier{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.earlier div{border-left:3px solid var(--taupe);padding:4px 0 4px 16px}
+.earlier h3{font:600 16px/1.3 var(--body);color:var(--heading)}
+.earlier p{margin:4px 0 0;color:var(--muted);font-size:14.5px}
+.earlier .when{display:block;margin-top:2px}
+
+.tools{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.tools li{font:500 14px/1 var(--body);padding:10px 14px;border-radius:999px;background:var(--card-soft);border:1px solid var(--line);color:var(--heading)}
+
+.edu{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.edu h3{font:600 18px/1.3 var(--body);color:var(--heading)}
+.edu p{margin:0;color:var(--muted)}
+
+/* contact */
+.contact{background:var(--heading);color:#F7F3EC;border-radius:16px;padding:44px clamp(20px,5vw,48px);display:grid;gap:18px}
+.contact h2{font-size:clamp(30px,4.5vw,46px);color:#F7F3EC}
+.contact p{margin:0;max-width:56ch;opacity:.8}
+.contact .row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.contact .btn{background:transparent;color:#F7F3EC;border-color:rgba(247,243,236,.45)}
+.contact .btn:hover{color:#fff;border-color:#fff}
+.contact .btn.primary{background:var(--cta);border-color:var(--cta);color:#fff}
+.contact code{font:500 15px var(--body);color:#E8DCCB}
+.copied{font:500 13px var(--body);color:#E8DCCB;min-height:1em}
+/* work samples */
+.lead{color:var(--muted);max-width:66ch;margin:-12px 0 24px}
+.samples{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.sample{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.sample.wide{grid-column:1 / -1}
+.sample img{display:block;width:100%;height:auto;border-bottom:1px solid var(--line);background:#fff}
+.sample figcaption{padding:16px 18px 18px;display:grid;gap:6px}
+.sample figcaption b{font:600 17px/1.3 var(--body);color:var(--heading)}
+.sample figcaption span{color:var(--muted);font-size:14.5px}
+.kind{font:600 11.5px/1 var(--body);text-transform:uppercase;letter-spacing:.08em;color:var(--sage)}
+@media (max-width:760px){.samples{grid-template-columns:1fr}}
+.ff{overflow-x:auto;border-bottom:1px solid var(--line);background:#FBF8F3}
+.ff table{border-collapse:collapse;font:12.5px/1.3 ui-monospace,Menlo,Consolas,monospace;color:#2E2B28;min-width:900px;width:100%}
+.ff th,.ff td{border:1px solid #E2D6C3;padding:7px 9px;text-align:left;white-space:nowrap}
+.ff thead tr:first-child th{background:#49352B;color:#fff;font-weight:500}
+.ff thead tr:nth-child(2) th{background:#F1E9DD;color:#49352B;font-weight:600}
+.ff td.r::before{content:"";display:inline-block;width:var(--w,70px);height:9px;border-radius:5px;background:#D6C7B0;filter:blur(1.5px);vertical-align:middle}
+.ff td.p{color:#5E6652;font-weight:500}
+.ff td.c{color:#8F4F35}
+.ff .note{padding:8px 10px;font:11.5px/1.4 var(--body);color:#5F564D;background:#F7F3EC}
+
+.group{font:600 13px/1.2 var(--body);text-transform:uppercase;letter-spacing:.1em;color:var(--heading);margin:36px 0 16px;display:flex;align-items:center;gap:14px}
+.group::after{content:"";flex:1;height:1px;background:var(--line)}
+.sec-head + .lead + .group{margin-top:0}
+.ff table.trk{font:13.5px/1.45 var(--body);min-width:760px}
+.ff table.trk th{background:#49352B;color:#fff;font-weight:600}
+.ff table.trk td{white-space:normal;vertical-align:top}
+.ff table.trk td.p{color:#49352B;font-weight:600;white-space:nowrap}
+.cats{list-style:none;margin:0 0 24px;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.cats li{font:500 15px/1 var(--body);padding:12px 18px;border-radius:999px;background:var(--surface);color:var(--heading);border:1px solid var(--line)}
+.cats li.more{background:transparent;border-style:dashed;border-color:var(--taupe);color:var(--muted)}
+.cat-work{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cat-work div{padding:18px 20px;border-left:3px solid var(--sage);background:var(--card-soft);border-radius:0 12px 12px 0}
+.cat-work p{margin:8px 0 0;font-size:15px;color:var(--ink)}
+@media (max-width:760px){.cat-work{grid-template-columns:1fr}}
+/* reviews */
+.score-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:20px}
+.month{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;display:grid;gap:10px;align-content:start}
+.month .k{font:500 12px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.month .v{font:700 40px/1 var(--body);color:var(--heading);font-variant-numeric:tabular-nums}
+.month .v small{font-size:18px;color:var(--muted);font-weight:500}
+.month .meter{height:8px;border-radius:4px;background:var(--card-soft);overflow:hidden}
+.month .meter i{display:block;height:100%;background:var(--sage)}
+.month ul{margin:0;padding-left:18px;display:grid;gap:4px;font-size:14.5px}
+.month ul li::marker{color:var(--mark)}
+@media (max-width:760px){.score-row{grid-template-columns:1fr}}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.quotes blockquote{margin:0;padding:20px 22px;border-left:3px solid var(--sage);background:var(--card-soft);border-radius:0 12px 12px 0;font:400 19px/1.4 var(--display);color:var(--heading)}
+.quotes cite{display:block;margin-top:10px;font:500 12.5px/1.3 var(--body);font-style:normal;color:var(--muted)}
+@media (max-width:760px){.quotes{grid-template-columns:1fr}}
+.scale{font-size:13.5px;color:var(--muted);margin:14px 0 0}
+footer{padding:28px 0 40px;color:var(--muted);font-size:13.5px}
+</style>
+</head>
+<body>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top">Jeice Cruz</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#categories">Categories</a></li>
+      <li><a href="#work">Work samples</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap" id="top">
+  <header class="hero">
+    <div class="hero-text">
+    <div class="tag">Amazon &amp; E-commerce Operations Specialist · Philippines · Remote</div>
+    <h1>Jaysone F. Dela Cruz <span>(Jei)</span></h1>
+    <p class="lede">I run the day-to-day of Amazon and Shopify accounts for U.S. and European brands: catalogs of <strong>3,000–5,000 ASINs</strong>, PPC budgets of <strong>$4–8K a day</strong> on accounts doing <strong>$300K–$1M in monthly sales</strong>, and the listings, variations, A+ Content and account health that keep them selling. 10+ years, fully remote.</p>
+    <div class="actions">
+      <a class="btn primary" href="#contact">Work with me</a>
+      <a class="btn" href="https://www.linkedin.com/in/jeicecruz/">LinkedIn profile</a>
+    </div>
+    </div>
+    <figure class="portrait"><img src="img/portrait.jpg" alt="Portrait of Jaysone (Jei) Dela Cruz in a camel blazer" width="640" height="800"></figure>
+  </header>
+
+  <div class="metrics" role="list" aria-label="Key numbers">
+    <div class="metric feature" role="listitem">
+      <div class="k">Monthly sales per PPC account</div>
+      <div class="v">$300K–$1M</div>
+      <div class="n">Average total monthly sales of the accounts I ran ads for</div>
+    </div>
+    <div class="metric" role="listitem">
+      <div class="k">Categories handled</div>
+      <div class="v">8+</div>
+      <div class="n">Supplements, grocery, beauty, automotive and more</div>
+    </div>
+    <div class="metric" role="listitem">
+      <div class="k">Remote experience</div>
+      <div class="v">10+ yrs</div>
+      <div class="n">Supporting U.S. brands and agencies</div>
+    </div>
+    <div class="metric" role="listitem">
+      <div class="k">ACoS vs. 21% target</div>
+      <div class="v">19–20%</div>
+      <div class="n">On $4–5K/day spend, roughly 5× ROAS</div>
+      <div class="bar" aria-hidden="true"><i style="width:65%"></i><b style="left:70%"></b></div>
+    </div>
+    <div class="metric" role="listitem">
+      <div class="k">Catalog per account</div>
+      <div class="v">3–5K ASINs</div>
+      <div class="n">Across multiple brands per client</div>
+    </div>
+    <div class="metric" role="listitem">
+      <div class="k">Catalog tasks / month</div>
+      <div class="v">500–800</div>
+      <div class="n">At an agency managing 175+ brands</div>
+    </div>
+    <div class="metric" role="listitem">
+      <div class="k">Fulfillment accuracy</div>
+      <div class="v">+15%</div>
+      <div class="n">Through logistics process audits</div>
+    </div>
+    <div class="metric" role="listitem">
+      <div class="k">Team co-led</div>
+      <div class="v">10 people</div>
+      <div class="n">Amazon &amp; Shopify operations</div>
+    </div>
+  </div>
+
+  <section id="about" aria-labelledby="about-h">
+    <div class="sec-head"><h2 id="about-h">About</h2></div>
+    <div class="about">
+      <div>
+        <p>I'm an Amazon and e-commerce operations professional with more than ten years of remote work for U.S. brands and agencies. Most recently I co-led a 10-person team running Amazon and Shopify operations for U.S. and European clients across multiple brands.</p>
+        <p>My work sits where catalog, advertising and account health meet: listing optimization, parent-child variations, A+ Content, Brand Stores, virtual bundles, promotions and A/B testing, all in Seller Central and Vendor Central.</p>
+        <p>Before Amazon, I spent years in logistics, export and customer operations, so I think about the whole chain from listing to doorstep.</p>
+      </div>
+      <ul class="facts">
+        <li><span class="k">Based in</span>Philippines, working U.S. &amp; EU hours remotely</li>
+        <li><span class="k">Marketplaces</span>Amazon Seller Central, Vendor Central, Shopify</li>
+        <li><span class="k">Focus</span>Catalog, PPC, account health, team leadership</li>
+        <li><span class="k">Education</span>B.S. Computer Science</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills" aria-labelledby="skills-h">
+    <div class="sec-head"><h2 id="skills-h">Core skills</h2></div>
+    <div class="skills">
+      <div class="skill"><h3>Catalog &amp; Content</h3>
+        <ul class="chips"><li>Listing optimization</li><li>Parent-child variations</li><li>Attribute management</li><li>A+ Content</li><li>Brand Stores</li><li>Virtual bundles</li></ul></div>
+      <div class="skill"><h3>Testing &amp; Promotions</h3>
+        <ul class="chips"><li>A/B experiments</li><li>Titles, bullets, images</li><li>Vine enrollment</li><li>Coupons</li><li>Deals</li><li>Strike-through pricing</li></ul></div>
+      <div class="skill"><h3>Advertising</h3>
+        <ul class="chips"><li>Amazon PPC</li><li>Keyword research</li><li>Bid optimization</li><li>ACoS / ROAS management</li></ul></div>
+      <div class="skill"><h3>Account Operations</h3>
+        <ul class="chips"><li>Seller &amp; Vendor Central</li><li>Account health</li><li>ASIN suppressions</li><li>Compliance cases</li><li>Inventory forecasting</li><li>Shopify</li></ul></div>
+      <div class="skill"><h3>Leadership &amp; Reporting</h3>
+        <ul class="chips"><li>Team management</li><li>KPI tracking</li><li>Client reporting</li><li>Workflow improvement</li><li>Logistics coordination</li></ul></div>
+    </div>
+  </section>
+
+  <section id="categories" aria-labelledby="cat-h">
+    <div class="sec-head"><h2 id="cat-h">Categories I've worked in</h2></div>
+    <p class="lead">Product listings, PPC and account health across a wide range of Amazon categories, including:</p>
+    <ul class="cats">
+      <li>Supplements</li><li>Grocery &amp; Gourmet Food</li><li>Beauty &amp; Personal Care</li><li>Perfumes &amp; Fragrances</li><li>Health &amp; Household</li><li>Automotive</li><li>Tools &amp; Home Improvement</li><li>Racks &amp; Storage</li><li>Pet Supplies</li><li class="more">and many more</li>
+    </ul>
+    <div class="cat-work">
+      <div><span class="kind">Product listings</span><p>Titles, bullets, attributes, variations, A+ Content and Brand Stores built to each category's style guide and required attributes.</p></div>
+      <div><span class="kind">PPC</span><p>Sponsored Products and Sponsored Brands campaigns on accounts doing $300K–$1M in total monthly sales, managed to ACoS and TACoS targets.</p></div>
+      <div><span class="kind">Account health</span><p>Suppressions, compliance and restricted-category cases, including the extra documentation that supplements, food and beauty products often need.</p></div>
+    </div>
+  </section>
+
+  <section id="work" aria-labelledby="work-h">
+    <div class="sec-head"><h2 id="work-h">Work samples</h2></div>
+    <p class="lead">Live Amazon pages, Seller Central dashboards and trackers from accounts I've worked on. Brand names, packaging, prices, sales figures and account details are blurred to protect the clients.</p>
+    <h3 class="group">Listings, variations &amp; brand content</h3>
+    <div class="samples">
+      <figure class="sample">
+        <a href="img/listing-vanilla.jpg" title="Open full size"><img src="img/listing-vanilla.jpg" alt="Amazon product page with a scent and size variation selector and a filled attribute table; brand and prices blurred" width="1600" height="800" loading="lazy"></a>
+        <figcaption><span class="kind">Variations · Attributes</span><b>Two-dimension variation family</b><span>Parent-child family built on Scent × Size: four scents and two pack sizes under one detail page, with Scent, Product Benefits, Recommended Uses and Material Type Free attributes filled in.</span></figcaption>
+      </figure>
+      <figure class="sample">
+        <a href="img/variation-greentea.jpg" title="Open full size"><img src="img/variation-greentea.jpg" alt="Same Amazon variation family switched to a different scent child; brand and prices blurred" width="1600" height="740" loading="lazy"></a>
+        <figcaption><span class="kind">Variations · QA</span><b>Child-level check after going live</b><span>Clicking through each child to confirm it maps to the right scent and size, and that every child has its own title, attributes and images.</span></figcaption>
+      </figure>
+      <figure class="sample">
+        <a href="img/brand-story.jpg" title="Open full size"><img src="img/brand-story.jpg" alt="Amazon From the Brand carousel with a Made in USA card, a lifestyle photo and a Shop New Products card; brand logo blurred" width="1600" height="712" loading="lazy"></a>
+        <figcaption><span class="kind">Brand Story</span><b>“From the brand” carousel</b><span>Brand Story module built in Seller Central: a brand-promise card, a lifestyle image and a cross-sell card that links to the Brand Store.</span></figcaption>
+      </figure>
+      <figure class="sample">
+        <a href="img/aplus-module.jpg" title="Open full size"><img src="img/aplus-module.jpg" alt="Premium A+ Content carousel showing ingredients with a Clean and Gentle Formula section below" width="1600" height="805" loading="lazy"></a>
+        <figcaption><span class="kind">A+ Content</span><b>Premium A+ carousel and benefit icons</b><span>Content-manager designs from Figma turned into A+ modules: an ingredient carousel followed by a “clean formula” benefits row.</span></figcaption>
+      </figure>
+      <figure class="sample">
+        <a href="img/listing-sizes.jpg" title="Open full size"><img src="img/listing-sizes.jpg" alt="Amazon product page with a five-option pack-size variation selector; brand, packaging and prices blurred" width="1600" height="784" loading="lazy"></a>
+        <figcaption><span class="kind">Variations · Size</span><b>Pack-size variation family</b><span>A single-dimension Size family with Pack of 1, 2, 3, 4 and 6. Each child has its own price, per-ounce price and delivery estimate, and attributes such as Item Form, Hair Type, Scent and Age Range are filled in.</span></figcaption>
+      </figure>
+      <figure class="sample">
+        <a href="img/brand-store.jpg" title="Open full size"><img src="img/brand-store.jpg" alt="Amazon Brand Store home page with category navigation, a best-sellers carousel and Shop Syrups and Shop Sauces tiles; brand and products blurred" width="1600" height="780" loading="lazy"></a>
+        <figcaption><span class="kind">Brand Store</span><b>Brand Store home and category navigation</b><span>Store built in Seller Central with a top navigation by product line (syrups, sauces, purées, concentrates, beverage boosts), a best-sellers carousel and image tiles that link to each category page.</span></figcaption>
+      </figure>
+      <figure class="sample wide">
+        <div class="ff" role="region" aria-label="Variation flat-file template" tabindex="0">
+          <table>
+            <thead>
+              <tr><th colspan="3">Listing Identity</th><th colspan="3">Variations</th><th colspan="3">Product Identity</th><th colspan="3">Product Details</th></tr>
+              <tr><th>SKU</th><th>Product Type</th><th>Listing Action</th><th>Parentage Level</th><th>Parent SKU</th><th>Variation Theme</th><th>Item Name</th><th>Brand Name</th><th>Product Id Type</th><th>Flavor</th><th>Size</th><th>Unit Count</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="r" style="--w:90px"></td><td>SUGAR_SUBSTITUTE</td><td>Edit (Partial Update)</td><td class="p">Parent</td><td></td><td class="c">FLAVOR/SIZE</td><td class="r" style="--w:220px"></td><td class="r" style="--w:70px"></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td class="r" style="--w:90px"></td><td>SUGAR_SUBSTITUTE</td><td>Edit (Partial Update)</td><td class="p">Child</td><td class="r" style="--w:90px"></td><td class="c">FLAVOR/SIZE</td><td class="r" style="--w:240px"></td><td class="r" style="--w:70px"></td><td>ASIN</td><td>Chocolate</td><td class="r" style="--w:60px"></td><td class="r" style="--w:30px"></td></tr>
+              <tr><td class="r" style="--w:90px"></td><td>SUGAR_SUBSTITUTE</td><td>Edit (Partial Update)</td><td class="p">Child</td><td class="r" style="--w:90px"></td><td class="c">FLAVOR/SIZE</td><td class="r" style="--w:230px"></td><td class="r" style="--w:70px"></td><td>ASIN</td><td>Chocolate</td><td class="r" style="--w:60px"></td><td class="r" style="--w:30px"></td></tr>
+            </tbody>
+          </table>
+          <div class="note">Column groups and valid values are taken from the Amazon category template. Product rows are placeholders, and SKUs, titles and the brand are hidden.</div>
+        </div>
+        <figcaption><span class="kind">Flat files</span><b>Variation template for a grocery family</b><span>The Amazon flat file I fill in to attach existing ASINs to a parent under the FLAVOR/SIZE theme. I set the parentage, parent SKU and theme in bulk instead of editing each listing one at a time.</span></figcaption>
+      </figure>
+      <figure class="sample wide">
+        <div class="ff" role="region" aria-label="Listing specialist workflow tracker" tabindex="0">
+          <table class="trk">
+            <thead><tr><th>Responsibility</th><th>Completed</th><th>Next step</th><th>Remaining steps</th></tr></thead>
+            <tbody>
+              <tr><td class="p">Listing creation</td><td>Drafted titles, bullet points and descriptions; uploaded images</td><td>Submit listings for Amazon approval</td><td>Monitor listing status; optimize with keywords</td></tr>
+              <tr><td class="p">Variation management</td><td>Created parent-child relationships; verified ASIN linking</td><td>Test variations on the product detail page</td><td>Adjust miscategorized variations; keep the catalog consistent</td></tr>
+              <tr><td class="p">Content submission</td><td>Submitted A+ Content (images, charts, Brand Story)</td><td>Track approval status in Seller Central</td><td>Revise and resubmit if rejected; update for seasonal promotions</td></tr>
+              <tr><td class="p">Listing issue resolution</td><td>Found listings suppressed for missing attributes</td><td>Fix compliance, image and attribute errors</td><td>Escalate unresolved cases to Amazon support; document fixes</td></tr>
+              <tr><td class="p">Inventory issue resolution</td><td>Synced inventory levels with warehouse data</td><td>Monitor the inventory health dashboard</td><td>Set restock alerts; manage replenishment; resolve stranded inventory</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figcaption><span class="kind">Workflow</span><b>Listing specialist task tracker</b><span>How I track each catalog workstream from done to next step to follow-up, so nothing stalls between submission and approval.</span></figcaption>
+      </figure>
+    </div>
+
+    <h3 class="group">Advertising &amp; reporting</h3>
+    <div class="samples">
+      <figure class="sample">
+        <a href="img/ppc-year.jpg" title="Open full size"><img src="img/ppc-year.jpg" alt="Amazon Ads campaign manager 12-month performance chart of spend, sales, purchases and impressions; totals and axis values blurred" width="1600" height="400" loading="lazy"></a>
+        <figcaption><span class="kind">Amazon Ads</span><b>12-month campaign performance</b><span>Year view in Campaign Manager tracking spend, sales, purchases and impressions month by month, used to compare seasonal peaks and keep the budget steady across the year.</span></figcaption>
+      </figure>
+      <figure class="sample">
+        <a href="img/ppc-october.jpg" title="Open full size"><img src="img/ppc-october.jpg" alt="Amazon Ads daily performance chart for October 2026; totals and axis values blurred" width="1600" height="353" loading="lazy"></a>
+        <figcaption><span class="kind">Amazon Ads</span><b>Daily pacing for the month</b><span>Day-by-day view for October. I used it to catch spend spikes, read late-month ramps and check that sales kept pace with cost.</span></figcaption>
+      </figure>
+      <figure class="sample">
+        <a href="img/tacos-tracker.jpg" title="Open full size"><img src="img/tacos-tracker.jpg" alt="Google Sheets TACoS monitoring tracker with daily, weekly and month-to-date TACoS against an 18 percent target; client name and dollar values blurred" width="1389" height="467" loading="lazy"></a>
+        <figcaption><span class="kind">TACoS tracking</span><b>Daily TACoS monitor against an 18% target</b><span>A sheet I kept to compare ad spend with total sales each day, week and month against the same period last year. Daily TACoS ran mostly between 15% and 18%, around the 18% target.</span></figcaption>
+      </figure>
+      <figure class="sample">
+        <a href="img/sales-snapshot.jpg" title="Open full size"><img src="img/sales-snapshot.jpg" alt="Seller Central Sales Dashboard comparing this year with last year for units and sales; figures blurred" width="1600" height="621" loading="lazy"></a>
+        <figcaption><span class="kind">Business reports</span><b>Year-over-year sales check</b><span>Sales Dashboard comparison of this year against last year for units and ordered sales, used in monthly client updates to explain trends.</span></figcaption>
+      </figure>
+      <figure class="sample wide">
+        <a href="img/business-report.jpg" title="Open full size"><img src="img/business-report.jpg" alt="Seller Central Business Report by month with averages, selling price and order item session percentage visible; sales, units and sessions blurred" width="1600" height="747" loading="lazy"></a>
+        <figcaption><span class="kind">Business reports</span><b>Monthly business report review</b><span>Month-by-month report for a full year: average selling price, units per order and conversion (order item session %), which stayed between 21% and 25%. Raw sales, units and sessions are hidden.</span></figcaption>
+      </figure>
+    </div>
+
+    <h3 class="group">Account health</h3>
+    <div class="samples">
+      <figure class="sample wide">
+        <a href="img/account-health.jpg" title="Open full size"><img src="img/account-health.jpg" alt="Seller Central Account Health page with a 1000 Account Health Rating, healthy policy compliance, zero issues and shipping metrics above target; order counts blurred" width="1600" height="771" loading="lazy"></a>
+        <figcaption><span class="kind">Account health</span><b>Healthy account: 1000 AHR, zero policy issues</b><span>The account I monitored: Account Health Rating at the 1000 maximum, 0 issues in every policy category, a 0.04% order defect rate against a 1% target, and 99.81% valid tracking and 99.68% on-time delivery.</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="reviews" aria-labelledby="rev-h">
+    <div class="sec-head"><h2 id="rev-h">Performance reviews</h2><span class="tag">Luminize · Listing Management</span></div>
+    <p class="lead">Monthly scorecards from my team lead. On the agency's 10-point scale, 5 means "meets KPIs" and 9 means "extremely above KPIs".</p>
+    <div class="score-row">
+      <div class="month">
+        <div class="k">July 2026</div>
+        <div class="v">9<small> / 10</small></div>
+        <div class="meter" aria-hidden="true"><i style="width:90%"></i></div>
+        <ul><li>849 tasks completed</li><li>Large batch of manual Item Highlights uploads, all checked</li><li>Above target on Quality, Attendance, Tool Use and Time Use</li></ul>
+      </div>
+      <div class="month">
+        <div class="k">August 2026</div>
+        <div class="v">9<small> / 10</small></div>
+        <div class="meter" aria-hidden="true"><i style="width:90%"></i></div>
+        <ul><li>Onboarded and mentored a new team member</li><li>All tasks on schedule; changed due dates updated in advance with reasons</li><li>Rated "excellent" on quality</li></ul>
+      </div>
+      <div class="month">
+        <div class="k">September 2026</div>
+        <div class="v">9.7<small> / 10</small></div>
+        <div class="meter" aria-hidden="true"><i style="width:97%"></i></div>
+        <ul><li>241 tasks completed, 0% overdue</li><li>90.4% of tasks closed within the 2-day SLA</li><li>Asana updates within 48 hours</li></ul>
+      </div>
+    </div>
+    <div class="quotes">
+      <blockquote>“Delivers excellent quality across all tasks.”<cite>Team Lead · Aug 2026</cite></blockquote>
+      <blockquote>“Exceptional responsiveness and team support.”<cite>Team Lead · Aug 2026</cite></blockquote>
+      <blockquote>“An outstanding month overall.”<cite>Team Lead · Aug 2026</cite></blockquote>
+    </div>
+  </section>
+
+  <section id="experience" aria-labelledby="exp-h">
+    <div class="sec-head"><h2 id="exp-h">Experience</h2></div>
+    <div class="log">
+      <article class="role">
+        <div class="when">Feb 2026 – Oct 2026</div>
+        <div>
+          <h3>Catalog Listing Specialist</h3>
+          <div class="org">Luminize</div>
+          <p class="ctx">Performance-based Amazon marketing agency managing 175+ brands and 18,000+ listings · Remote</p>
+          <ul>
+            <li>Handled 500–800 catalog tasks per month on the agency's dedicated catalog team.</li>
+            <li>Optimized titles, bullet points, descriptions and attributes to improve content quality, discoverability and catalog completeness.</li>
+            <li>Built and corrected parent-child variations, including relationships and attributes, across all assigned brands.</li>
+            <li>Built A+ Content and Brand Store pages in Seller Central from designs and assets prepared in Figma.</li>
+            <li>Created virtual bundles to merchandise complementary products and widen cross-product purchasing.</li>
+          </ul>
+          <div class="hl"><span>175+ brands</span><span>18,000+ listings</span><span>500–800 tasks/mo</span></div>
+        </div>
+      </article>
+
+      <article class="role">
+        <div class="when">May 2020 – Jan 2026</div>
+        <div>
+          <h3>Operations Co-Team Lead, Amazon &amp; E-commerce</h3>
+          <div class="org">Merkato LLC</div>
+          <p class="ctx">U.S. Amazon and e-commerce agency · Remote</p>
+          <ul>
+            <li>Co-led a 10-person team running Amazon and Shopify operations for 2–3 U.S. clients across multiple brands, with 3,000–5,000 ASINs per account.</li>
+            <li>Managed Amazon PPC at $4–5K/day on an account with an estimated $11–13M in annual revenue, holding ACoS at 19–20% against a 21% target at roughly 5× ROAS; managed $5–8K/day budgets on another account.</li>
+            <li>Handled inventory forecasting in Seller Central and Vendor Central, and fixed listing attributes and variations.</li>
+            <li>Investigated and resolved ASIN suppressions, listing issues and account-compliance cases across large catalogs.</li>
+            <li>Tracked workflows against client KPIs and prepared performance reports for client and stakeholder meetings.</li>
+          </ul>
+          <div class="hl"><span>$11–13M account</span><span>ACoS 19–20%</span><span>~5× ROAS</span><span>10-person team</span></div>
+        </div>
+      </article>
+
+      <article class="role">
+        <div class="when">2016 – 2020</div>
+        <div>
+          <h3>Logistics Department Head</h3>
+          <div class="org">CG Trade Group</div>
+          <p class="ctx">U.S. client · Remote</p>
+          <ul>
+            <li>Led logistics operations and process reviews to strengthen order fulfillment and cross-team coordination.</li>
+            <li>Improved fulfillment accuracy by 15% through logistics process audits and corrective actions.</li>
+            <li>Managed hiring, staff training and workforce forecasting; prepared executive reports aligned with cross-functional metrics.</li>
+          </ul>
+          <div class="hl"><span>+15% fulfillment accuracy</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="earlier-h">
+    <div class="sec-head"><h2 id="earlier-h">Earlier experience</h2></div>
+    <div class="earlier">
+      <div><h3>Customer Service Support Specialist</h3><span class="when">Wicked Lasers, Shanghai · 2007 – 2016</span>
+        <p>Customer inquiries, RMA requests, carrier and warehouse coordination, sold-and-shipped reporting.</p></div>
+      <div><h3>Foreign Market Export Manager</h3><span class="when">AK Autoparts Korean Co., Shanghai · 2006 – 2007</span>
+        <p>European buyer transactions, export documentation, shipment clearance.</p></div>
+      <div><h3>Sales Associate / Confirmation Officer</h3><span class="when">Megacall, Inc., Makati · 2003 – 2006</span>
+        <p>Sales verification, delivery monitoring, agent performance reviews.</p></div>
+    </div>
+  </section>
+
+  <section id="tools" aria-labelledby="tools-h">
+    <div class="sec-head"><h2 id="tools-h">Platforms &amp; tools</h2></div>
+    <ul class="tools">
+      <li>Amazon Seller Central</li><li>Amazon Vendor Central</li><li>Shopify</li><li>Helium 10</li><li>Jungle Scout</li><li>Cobalt</li><li>Merchant Spring</li><li>Keepa</li><li>Asana</li><li>Monday.com</li><li>Wrike</li><li>Trello</li><li>Google Sheets</li><li>Google Analytics</li><li>Excel</li><li>Figma</li><li>ChatGPT</li><li>Claude</li><li>Loom</li><li>Zoom</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="edu-h">
+    <div class="sec-head"><h2 id="edu-h">Education</h2></div>
+    <div class="edu">
+      <div><h3>Bachelor's Degree in Computer Science</h3><p>Philippine Computer Science Institute, Bulacan</p></div>
+    </div>
+  </section>
+
+  <section id="contact" aria-labelledby="contact-h">
+    <div class="contact">
+      <div class="tag" style="color:#C9CFBC">Open to remote roles</div>
+      <h2 id="contact-h">Need someone to run your Amazon catalog, ads or account health?</h2>
+      <p>I'm available for full-time or contract work with brands and agencies in the U.S. and Europe.</p>
+      <div class="row">
+        <a class="btn primary" href="mailto:iamjeiceee@gmail.com">Email me</a>
+        <button class="btn" type="button" id="copy">Copy email</button>
+        <a class="btn" href="https://www.linkedin.com/in/jeicecruz/">LinkedIn</a>
+      </div>
+      <div class="row"><code>iamjeiceee@gmail.com</code><span class="copied" id="copied" aria-live="polite"></span></div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">© 2026 Jaysone F. Dela Cruz · Amazon &amp; E-commerce Operations</footer>
+
+<script>
+document.getElementById('copy').addEventListener('click', async () => {
+  const out = document.getElementById('copied');
+  try { await navigator.clipboard.writeText('iamjeiceee@gmail.com'); out.textContent = 'Copied'; }
+  catch (e) { out.textContent = 'Select the address to copy it'; }
+});
+</script>
+</body>
+</html>
